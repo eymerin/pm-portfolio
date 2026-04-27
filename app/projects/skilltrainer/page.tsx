@@ -100,7 +100,7 @@ export default function SkillTrainerCaseStudy() {
         </div>
       </nav>
 
-      <article className="max-w-5xl mx-auto px-6 py-14">
+      <article className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
 
         {/* ── HERO ── */}
         <div className="mb-16">
@@ -117,10 +117,10 @@ export default function SkillTrainerCaseStudy() {
                 <circle cx="20" cy="20" r="10" stroke="currentColor" strokeWidth="1.5" className="text-skill-brand opacity-70" />
                 <circle cx="20" cy="20" r="3" fill="currentColor" className="text-skill-brand" />
               </svg>
-              <h1 className="text-5xl font-bold text-skill-text tracking-tight">MakePerfect</h1>
+              <h1 className="text-3xl sm:text-5xl font-bold text-skill-text tracking-tight">MakePerfect</h1>
             </div>
 
-            <p className="text-xl text-skill-muted/80 max-w-2xl leading-relaxed mb-3">
+            <p className="text-base sm:text-xl text-skill-muted/80 max-w-2xl leading-relaxed mb-3">
               A universal structured practice system for people who already show up — but still aren&apos;t improving.
             </p>
             <p className="text-sm text-skill-muted/40 max-w-xl">
@@ -196,25 +196,23 @@ export default function SkillTrainerCaseStudy() {
             <div className="px-4 py-2.5 bg-skill-raised/60">
               <p className="text-xs font-semibold text-skill-muted/60 uppercase tracking-wider">Why existing tools don&apos;t solve this</p>
             </div>
-            <table className="w-full text-sm">
-              <tbody className="divide-y divide-skill-raised/20">
-                {[
-                  ["Habit trackers (Streaks, Loop)", "Track attendance, not quality. A 5-minute warmup and a 45-minute session look identical."],
-                  ["Domain-specific apps",            "Built for one discipline. Multi-skill users need a separate app for each."],
-                  ["Timers and journals",             "Measure time spent, not progression. Blank canvases require users to design structure themselves."],
-                  ["Notion, spreadsheets",            "Flexible, but users must build and maintain the system. Most abandon it by week two."],
-                ].map(([tool, gap]) => (
-                  <tr key={tool}>
-                    <td className="px-4 py-3 font-medium text-skill-muted/80 w-56 shrink-0 align-top">{tool}</td>
-                    <td className="px-4 py-3 text-skill-muted/50">{gap}</td>
-                  </tr>
-                ))}
-                <tr className="bg-skill-brand/5">
-                  <td className="px-4 py-3 font-semibold text-skill-brand w-56 shrink-0 align-top">MakePerfect</td>
-                  <td className="px-4 py-3 text-skill-muted/70">Reusable structured progression across any skill. Define the routine once; the product runs it session after session.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="divide-y divide-skill-raised/20">
+              {[
+                ["Habit trackers (Streaks, Loop)", "Track attendance, not quality. A 5-minute warmup and a 45-minute session look identical."],
+                ["Domain-specific apps",            "Built for one discipline. Multi-skill users need a separate app for each."],
+                ["Timers and journals",             "Measure time spent, not progression. Blank canvases require users to design structure themselves."],
+                ["Notion, spreadsheets",            "Flexible, but users must build and maintain the system. Most abandon it by week two."],
+              ].map(([tool, gap]) => (
+                <div key={tool} className="px-4 py-3 flex flex-col sm:flex-row sm:gap-4">
+                  <p className="text-sm font-medium text-skill-muted/80 sm:w-56 sm:shrink-0 mb-0.5 sm:mb-0">{tool}</p>
+                  <p className="text-sm text-skill-muted/50">{gap}</p>
+                </div>
+              ))}
+              <div className="px-4 py-3 flex flex-col sm:flex-row sm:gap-4 bg-skill-brand/5">
+                <p className="text-sm font-semibold text-skill-brand sm:w-56 sm:shrink-0 mb-0.5 sm:mb-0">MakePerfect</p>
+                <p className="text-sm text-skill-muted/70">Reusable structured progression across any skill. Define the routine once; the product runs it session after session.</p>
+              </div>
+            </div>
           </div>
         </section>
 

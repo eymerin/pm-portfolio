@@ -93,7 +93,7 @@ export default function FreshPrepCaseStudy() {
         </div>
       </nav>
 
-      <article className="max-w-5xl mx-auto px-6 py-14">
+      <article className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
 
         {/* ── HERO ── */}
         <div className="mb-16">
@@ -109,10 +109,10 @@ export default function FreshPrepCaseStudy() {
                 <path d="M12 13 C14 11 17 11 19 12 C18 15 15 15 12 13Z" />
                 <path d="M12 13 C12 11 13 9 12 7" />
               </svg>
-              <h1 className="text-5xl font-bold text-brand-muted tracking-tight">FreshPrep</h1>
+              <h1 className="text-3xl sm:text-5xl font-bold text-brand-muted tracking-tight">FreshPrep</h1>
             </div>
 
-            <p className="text-xl text-brand-muted/70 max-w-2xl leading-relaxed mb-3">
+            <p className="text-base sm:text-xl text-brand-muted/70 max-w-2xl leading-relaxed mb-3">
               A meal prep system built for the part most tools ignore: the week after cooking.<br />Turn one prep session into multiple successful weekdays.
             </p>
             <p className="text-sm text-brand-muted/40 max-w-xl">

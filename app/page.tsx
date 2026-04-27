@@ -6,15 +6,15 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="hero-glow relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6 pt-28 pb-32">
+        <div className="max-w-5xl mx-auto px-6 pt-16 pb-20 sm:pt-28 sm:pb-32">
           <p className="text-sm text-site-secondary mb-3">
             Hi, I&apos;m <span className="text-site-ink font-semibold">Garrett Young</span>, a PM candidate who builds real products instead of slide decks.
           </p>
-          <h1 className="text-6xl font-bold text-site-ink leading-[1.08] tracking-tight max-w-3xl mb-6">
+          <h1 className="text-4xl sm:text-6xl font-bold text-site-ink leading-[1.08] tracking-tight max-w-3xl mb-6">
             I turn user problems<br />
             into shipped products.
           </h1>
-          <p className="text-lg text-site-secondary max-w-lg leading-relaxed mb-10">
+          <p className="text-base sm:text-lg text-site-secondary max-w-lg leading-relaxed mb-10">
             With a background in design, production, and support, I&apos;ve learned how products are scoped,
             built, and where users encounter friction.
           </p>
@@ -118,13 +118,13 @@ export default function Home() {
 
       {/* ── CONTACT ── */}
       <section id="contact" className="max-w-5xl mx-auto px-6 py-20">
-        <div className="bg-site-surface rounded-2xl px-10 py-14 text-center border border-site-border/25 relative overflow-hidden">
+        <div className="bg-site-surface rounded-2xl px-6 py-10 sm:px-10 sm:py-14 text-center border border-site-border/25 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-96 h-48 bg-site-warm/10 rounded-full blur-3xl" />
           </div>
           <div className="relative">
             <p className="text-xs text-site-emerald font-semibold uppercase tracking-widest mb-3">Actively seeking PM roles</p>
-            <h2 className="text-3xl font-bold text-site-ink mb-4">Let&apos;s talk product</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-site-ink mb-4">Let&apos;s talk product</h2>
             <p className="text-site-secondary text-base mb-3 max-w-sm mx-auto leading-relaxed">
               If you&apos;re building something where execution is the hard part, I&apos;d like to hear about it.
             </p>

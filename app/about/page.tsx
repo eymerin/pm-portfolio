@@ -5,11 +5,11 @@ export const metadata: Metadata = { title: "About — Garrett Young" };
 
 export default function About() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-20">
+    <div className="max-w-3xl mx-auto px-6 py-12 sm:py-20">
       <p className="text-xs text-site-emerald font-semibold uppercase tracking-widest mb-6">About</p>
-      <h1 className="text-4xl font-bold text-site-ink leading-tight mb-6">About Me</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-site-ink leading-tight mb-6">About Me</h1>
 
-      <p className="text-site-secondary text-lg leading-relaxed mb-4">
+      <p className="text-site-secondary text-base sm:text-lg leading-relaxed mb-4">
         I&apos;m working toward product management through a background that combines design, production, and hands-on technical support.
       </p>
       <p className="text-site-secondary leading-relaxed mb-4">
