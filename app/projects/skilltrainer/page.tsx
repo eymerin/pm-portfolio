@@ -124,29 +124,11 @@ export default function SkillTrainerCaseStudy() {
               A universal structured practice system for people who already show up — but still aren&apos;t improving.
             </p>
             <p className="text-sm text-skill-muted/40 max-w-xl">
-              Built solo. Working browser prototype with Android build available. Designed to work across any skill.
+              Built solo. Working product with web and Android builds. Designed to work across any skill.
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {([
-              { n: "6",  label: "Major product iterations",      sub: "from original concept to what shipped" },
-              { n: "Scope", label: "Deliberate tradeoffs",      sub: "core loop before expansion" },
-              { n: "0",  label: "Accounts required",             sub: "loads and works immediately"           },
-              { n: "4",  label: "Tabs built around user intent", sub: "Home · Skills · Sessions · Progress"   },
-            ] as { n: string | null; label: string; sub: string }[]).map(s => (
-              <div key={s.label} className="bg-skill-surface border border-skill-raised/40 rounded-xl p-4">
-                {s.n !== null && <p className="text-3xl font-bold text-skill-text">{s.n}</p>}
-                <p className={s.n !== null ? "text-xs font-semibold text-skill-muted/80 mt-1" : "text-sm font-semibold text-skill-text mb-1"}>
-                  {s.label}
-                </p>
-                <p className="text-xs text-skill-muted/35 mt-0.5">{s.sub}</p>
-              </div>
-            ))}
-          </div>
-
-          <a
+          <
             href="#demos"
             className="inline-flex items-center gap-2 text-sm text-skill-brand border border-skill-brand/30 px-4 py-2 rounded-full hover:bg-skill-brand/10 transition-colors font-medium"
           >
@@ -159,7 +141,7 @@ export default function SkillTrainerCaseStudy() {
         {/* ── PROBLEM ── */}
         <section id="problem" className="mb-16">
           <Label>The Problem</Label>
-          <SectionHeading>Practice happens. Improvement often doesn&apos;t.</SectionHeading>
+          <SectionHeading>People practice consistently. Improvement still stalls.</SectionHeading>
 
           <p className="text-skill-muted/60 leading-relaxed mb-2 max-w-2xl">
             The failure mode isn&apos;t missing sessions. It&apos;s what happens inside them. No plan means decisions get made under pressure. Familiar exercises win. The ones that matter get deferred.

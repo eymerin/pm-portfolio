@@ -8,8 +8,11 @@ export default function Projects() {
     <div className="max-w-5xl mx-auto px-6 py-12 sm:py-20">
       <p className="text-xs text-site-emerald font-semibold uppercase tracking-widest mb-6">Portfolio</p>
       <h1 className="text-3xl sm:text-4xl font-bold text-site-ink leading-tight mb-4">Projects</h1>
+      <p className="text-site-secondary text-base mb-2 max-w-xl leading-relaxed">
+        I build products to explore real user problems, test product judgment, and improve how I think.
+      </p>
       <p className="text-site-secondary text-base mb-10 sm:mb-14 max-w-xl leading-relaxed">
-        Shipped prototypes built to demonstrate specific PM competencies. Not ideas — executed products with documented decisions.
+        Each project targets a different product challenge: consumer retention, behavior systems, and B2B operations.
       </p>
 
       <div className="space-y-4">
@@ -19,9 +22,7 @@ export default function Projects() {
               <div className="flex-1 min-w-60">
                 <h2 className="text-xl font-bold text-site-ink mb-2">FreshPrep</h2>
                 <p className="text-sm text-site-secondary leading-relaxed max-w-md">
-                  A meal prep execution system. Built around the insight that meal prep fails after
-                  cooking, not before it. 14 features cut with documented rationale. Shipped as a
-                  native Android app.
+                  A meal prep execution system built for the week after cooking. Most tools stop at the shopping list. FreshPrep tracks what you made, what&apos;s still fresh, and how to use it across the week. Shipped as an Android app.
                 </p>
               </div>
               <span className="text-sm text-site-muted group-hover:text-site-emerald transition-colors font-medium self-center shrink-0">
@@ -37,9 +38,7 @@ export default function Projects() {
               <div className="flex-1 min-w-60">
                 <h2 className="text-xl font-bold text-site-ink mb-2">MakePerfect</h2>
                 <p className="text-sm text-site-secondary leading-relaxed max-w-md">
-                  A universal structured practice system for self-directed learners. Domain-agnostic
-                  by design — the same system for guitar, basketball, coding, or anything else. Built
-                  around deliberate routines, guided sessions, and honest completion tracking.
+                  A structured practice system for people who already show up but aren&apos;t improving. Unstructured effort doesn&apos;t compound. MakePerfect gives the session a plan before it starts. Works in browser with an Android build.
                 </p>
               </div>
               <span className="text-sm text-site-muted group-hover:text-indigo-400 transition-colors font-medium self-center shrink-0">

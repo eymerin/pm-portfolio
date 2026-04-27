@@ -10,19 +10,13 @@ export default function About() {
       <h1 className="text-3xl sm:text-4xl font-bold text-site-ink leading-tight mb-6">About Me</h1>
 
       <p className="text-site-secondary text-base sm:text-lg leading-relaxed mb-4">
-        I&apos;m working toward product management through a background that combines design, production, and hands-on technical support.
+        I come from technical support, implementation, and customer-facing operations — the side of software where product decisions meet reality.
       </p>
       <p className="text-site-secondary leading-relaxed mb-4">
-        My degree in game design, with a producing focus, taught me how to think about scope, priorities, team
-        coordination, and building within real constraints. Creating anything worthwhile means balancing ambition
-        with time, resources, and what matters most to the user. That lesson applies just as much to software
-        products as it does to games.
+        Working directly with users taught me where friction lives, where workflows break, and which requests are symptoms versus real opportunities.
       </p>
       <p className="text-site-secondary leading-relaxed mb-14">
-        Later, working in technical support and escalations gave me a different kind of product education. I saw
-        where users got stuck, where workflows created friction, and how often the requested fix was different
-        from the real problem. That experience made me comfortable working through ambiguity, identifying
-        patterns, and focusing on root causes instead of surface symptoms.
+        I&apos;m pursuing product roles because I already think in product terms: user pain, prioritization, tradeoffs, workflows, and outcomes.
       </p>
 
       <div className="space-y-5">

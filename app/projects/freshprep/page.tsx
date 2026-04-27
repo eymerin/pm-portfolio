@@ -122,25 +122,7 @@ export default function FreshPrepCaseStudy() {
             </p>
           </div>
 
-          {/* Hero stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {([
-              { n: "6",  label: "Lifecycle stages",    sub: "plan → shop → prep → schedule → consume → return" },
-              { n: "Scope", label: "Focused MVP",   sub: "weekly execution before expansion" },
-              { n: "5",  label: "Retention mechanics", sub: "onboarding · dashboard · streak · reset · benefit messaging" },
-              { n: "0",  label: "Accounts required",   sub: "works immediately on install" },
-            ] as { n: string | null; label: string; sub: string }[]).map((s) => (
-              <div key={s.label} className="bg-brand-surface border border-brand-raised/40 rounded-xl p-4">
-                {s.n !== null && <p className="text-3xl font-bold text-brand-muted">{s.n}</p>}
-                <p className={s.n !== null ? "text-xs font-semibold text-brand-muted/70 mt-1" : "text-sm font-semibold text-brand-muted/80 mb-1"}>
-                  {s.label}
-                </p>
-                <p className="text-xs text-brand-muted/35 mt-0.5">{s.sub}</p>
-              </div>
-            ))}
-          </div>
-
-          <a
+          <
             href="#demos"
             className="inline-flex items-center gap-2 text-sm text-brand-accent border border-brand-accent/30 px-4 py-2 rounded-full hover:bg-brand-accent/10 transition-colors font-medium"
           >
