@@ -126,7 +126,7 @@ export default function FreshPrepCaseStudy() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
             {([
               { n: "6",  label: "Lifecycle stages",    sub: "plan → shop → prep → schedule → consume → return" },
-              { n: null, label: "Focused MVP Scope",   sub: "Prioritized planning, prep logging, scheduling, and weekly follow-through first." },
+              { n: "Scope", label: "Focused MVP",   sub: "weekly execution before expansion" },
               { n: "5",  label: "Retention mechanics", sub: "onboarding · dashboard · streak · reset · benefit messaging" },
               { n: "0",  label: "Accounts required",   sub: "works immediately on install" },
             ] as { n: string | null; label: string; sub: string }[]).map((s) => (
@@ -307,8 +307,8 @@ export default function FreshPrepCaseStudy() {
           <Label>Interactive Demos</Label>
           <SectionHeading>Interactive demos of the highest-leverage product decisions behind FreshPrep.</SectionHeading>
           <div className="space-y-1 text-sm text-brand-muted/50 mb-12 max-w-xl">
-            <p>The product was also built into an Android version, reinforcing real mobile meal-planning behavior.</p>
-            <p>Each demo shows how the system improves planning, execution, confidence, or repeat weekly use.</p>
+            <p>The app also has an Android build, so the flows were designed for real mobile use.</p>
+            <p>Each demo shows one product decision behind the weekly meal-prep loop.</p>
           </div>
 
           <div className="space-y-20">
@@ -342,8 +342,8 @@ export default function FreshPrepCaseStudy() {
             <DemoSection
               subtitle="Retention Design"
               title="The weekly return loop"
-              problem="A meal prep tool that helps once but doesn't bring users back every week has a retention problem, not a feature problem. First-time activation is straightforward. Designing for the weekly return habit is the harder challenge."
-              insight="The dashboard surfaces a single most-relevant next action — not a list of alerts. A streak tracker rewards consistent weeks. A reset prompt fires Sunday evening when the prior week went well and no new plan exists. Prep sessions end with 'Covered through Thursday' instead of 'Logged.' These work together as a coordinated return loop, not separate features."
+              problem="A meal prep tool has to be useful after the first prep session. The harder problem is getting users to return when the next week starts."
+              insight="The dashboard shows one useful next action, weekly progress, and momentum. Prep completion uses benefit-first language like 'Covered through Thursday.' The system is designed around the weekly return loop, not just first-time setup."
             >
               <RetentionLoopDemo />
             </DemoSection>
@@ -396,7 +396,7 @@ export default function FreshPrepCaseStudy() {
               },
               {
                 title: "Progress behind a header icon, not a nav tab",
-                body: "Insights are accessible from every screen via a persistent header icon — but don't occupy a primary tab. Every new tab is a place users have to learn and navigate to. The icon is discoverable when you want it; invisible when you don't.",
+                body: "Insights are available from the header instead of becoming another primary tab. The core workflow stays simple, while progress data remains one tap away.",
                 tradeoff: "Discoverability vs. navigation clarity",
               },
             ].map((item) => (
@@ -449,15 +449,15 @@ export default function FreshPrepCaseStudy() {
 
           {/* What was delayed */}
           <div className="mb-10">
-            <p className="text-xs text-brand-muted/40 uppercase tracking-wider font-medium mb-3">What I Intentionally Delayed</p>
+            <p className="text-xs text-brand-muted/40 uppercase tracking-wider font-medium mb-3">What I intentionally delayed</p>
             <p className="text-sm text-brand-muted/50 leading-relaxed mb-3 max-w-2xl">
-              I focused FreshPrep&apos;s first version on the week after cooking. That&apos;s the execution layer most tools ignore. Anything outside that loop got deferred.
+              FreshPrep&apos;s first version focused on the weekly execution loop. Features that didn&apos;t strengthen that loop were deferred.
             </p>
             <div className="bg-brand-surface border border-brand-raised/40 rounded-xl overflow-hidden">
               <div className="divide-y divide-brand-raised/20">
                 {[
-                  ["Nutrition tracking",           "Already a crowded category and not the core differentiation. This user knows what they eat."],
-                  ["Push notifications",           "V2. Infrastructure already in place via Capacitor. Timing logic is next."],
+                  ["Nutrition tracking",           "Already crowded, and not the core failure point. FreshPrep is about follow-through after cooking."],
+                  ["Push notifications",           "Useful once the timing logic is proven. Expiration reminders are a natural next step, not required for v1."],
                   ["Multi-user sharing",           "Requires a backend. Validate the solo use case before adding household complexity."],
                   ["Grocery delivery integration", "Needs a third-party API. The shopping list covers the core need without the dependency."],
                   ["Recurring plan templates",     "Valuable once the recipe library is stable. Not needed to validate the core workflow."],
@@ -494,7 +494,7 @@ export default function FreshPrepCaseStudy() {
               },
               {
                 shift: "The home screen evolved from a stat strip to a three-zone command center",
-                detail: "The first version was a simple alert strip — a few chips showing inventory count and eaten meals. Iterating revealed that TODAY, THIS WEEK, and MOMENTUM are genuinely different cognitive registers. A user checking in midweek needs a different signal than one planning for Sunday. Separating them into named zones made the dashboard readable at a glance instead of a block of numbers requiring interpretation.",
+                detail: "The first version was a simple stat strip. Building it showed that midweek check-ins, weekly planning, and momentum are different jobs. Splitting the dashboard into TODAY, THIS WEEK, and MOMENTUM made the screen easier to read and easier to act on.",
               },
             ].map((item, i) => (
               <details key={item.shift} className="group bg-brand-surface border border-brand-raised/40 rounded-xl overflow-hidden">
@@ -602,9 +602,9 @@ export default function FreshPrepCaseStudy() {
           <p className="text-xs text-brand-accent font-semibold uppercase tracking-widest mb-5">What building this taught me</p>
           <div className="space-y-4 max-w-2xl">
             {[
-              { title: "Name the central object early",        body: "Every ambiguous design decision was one where I hadn't committed to 'prep batch' as the thing everything else serves. The architecture clarified the moment the object was named." },
-              { title: "Workflow gates are product decisions", body: "The 'Send to Prep' gate felt like a UX detail. It's a judgment call about where data accuracy outweighs speed. That kind of reasoning shows up in every product." },
-              { title: "Retention is a design problem",        body: "I originally thought if the core workflow was useful, return behavior would follow naturally. It doesn't. The streak tracker, reset trigger, coverage language, and benefit-first messaging had to be deliberately designed — not assumed." },
+              { title: "Name the central object early",        body: "The product got clearer once the prep batch became the central object. Everything else — planning, freshness, scheduling, and eating — serves that object." },
+              { title: "Workflow gates are product decisions", body: "The 'Send to Prep' step looks like friction, but it protects data quality. Sometimes the right product choice is the slower one because it keeps the system trustworthy." },
+              { title: "Retention is a design problem",        body: "Useful workflows do not automatically create repeat behavior. Return moments have to be designed: the reset prompt, coverage language, streak, and benefit-first completion state all exist for that reason." },
             ].map((item) => (
               <div key={item.title} className="border-l-2 border-brand-raised/80 pl-5">
                 <h4 className="text-sm font-semibold text-brand-muted mb-1">{item.title}</h4>
@@ -639,7 +639,7 @@ export default function FreshPrepCaseStudy() {
 
         {/* ── CTA ── */}
         <div className="bg-brand-raised border border-brand-accent/30 rounded-2xl px-8 py-10 text-center">
-          <p className="text-sm text-brand-muted/50 mb-2">This project reflects how I think about recurring real-world problems: reduce friction, build confidence, and ship tools people actually reuse.</p>
+          <p className="text-sm text-brand-muted/50 mb-2">This project shows how I think about recurring real-world problems: reduce friction, build trust, and make repeat use easier.</p>
           <h3 className="text-xl font-bold text-brand-muted mb-5">If that&apos;s relevant to what you&apos;re building, I&apos;d welcome the conversation.</h3>
           <a
             href="mailto:garrett.bryce.young@gmail.com"

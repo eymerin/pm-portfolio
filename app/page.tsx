@@ -8,15 +8,14 @@ export default function Home() {
       <section className="hero-glow relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 pt-16 pb-20 sm:pt-28 sm:pb-32">
           <p className="text-sm text-site-secondary mb-3">
-            Hi, I&apos;m <span className="text-site-ink font-semibold">Garrett Young</span>, a PM candidate who builds real products instead of slide decks.
+            Hi, I&apos;m <span className="text-site-ink font-semibold">Garrett Young</span>, a PM candidate who builds working products, not just presentations.
           </p>
           <h1 className="text-4xl sm:text-6xl font-bold text-site-ink leading-[1.08] tracking-tight max-w-3xl mb-6">
             I turn user problems<br />
             into shipped products.
           </h1>
           <p className="text-base sm:text-lg text-site-secondary max-w-lg leading-relaxed mb-10">
-            With a background in design, production, and support, I&apos;ve learned how products are scoped,
-            built, and where users encounter friction.
+            With a background in design, production, and technical support, I focus on the gap between what products promise and where users actually get stuck.
           </p>
           <div className="flex items-center gap-4 flex-wrap">
             <Link
@@ -61,10 +60,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-site-border/20 mb-8">
             {([
-              { n: "4",  label: "User failure modes solved",  sub: null },
-              { n: null, label: "Scope Discipline",           sub: "Core value first. Expansion later." },
-              { n: "3",  label: "End-to-end user workflows",  sub: null },
-              { n: "0",  label: "Accounts required to start", sub: null },
+              { n: "4",          label: "User failure modes solved",  sub: null },
+              { n: "Scope",      label: "Intentional tradeoffs",      sub: "Focused v1 on the workflows most likely to create immediate value." },
+              { n: "Lifecycle",  label: "Plan → prep → repeat",       sub: null },
+              { n: "0",          label: "Accounts required to start", sub: null },
             ] as { n: string | null; label: string; sub: string | null }[]).map((stat) => (
               <div key={stat.label}>
                 {stat.n !== null && <p className="text-3xl font-bold text-site-emerald">{stat.n}</p>}
@@ -92,22 +91,21 @@ export default function Home() {
           <p className="text-xs text-site-emerald uppercase tracking-widest font-semibold mb-2">Point of view</p>
           <h2 className="text-2xl font-bold text-site-ink mb-3">The product problems I&apos;m drawn to</h2>
           <p className="text-site-secondary text-sm mb-10 max-w-lg">
-            These aren&apos;t principles I read in a book. They&apos;re patterns I kept seeing in escalation data —
-            and kept seeing again while building FreshPrep.
+            These are patterns I&apos;ve seen in support escalations, product proposals, and the products I built for this portfolio.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
                 title: "Execution gaps, not inspiration gaps",
-                body: "The user already knows what they want to do. They can't follow through consistently. That's the problem. Most apps try to fix that with reminders and streaks. Wrong fix. The friction is operational. Build for that.",
+                body: "The user already knows what they want to do. They can't follow through consistently. That's the problem. Most apps try to solve that with reminders or motivation. The better question is where the workflow breaks.",
               },
               {
                 title: "Objects with a lifecycle",
-                body: "Some product objects have real state. A prep batch. A support ticket. A reservation. They get created, updated, consumed, expired. That's where UX decisions carry the most weight. A form doesn't have stakes. These do.",
+                body: "Some product objects have real state. A prep batch. A support ticket. A reservation. They get created, updated, consumed, expired. That's where UX decisions carry the most weight. That is where small UX decisions start to matter.",
               },
               {
                 title: "The seam between deciding and doing",
-                body: "Planning tools exist everywhere. Logging tools too. Almost nothing helps with the actual doing part. That's the gap. It's also where the most interesting product problems live.",
+                body: "Planning tools exist everywhere. Logging tools do too. The more interesting product gap is the handoff between deciding and doing.",
               },
             ].map((item) => (
               <div key={item.title} className="bg-site-bg/50 border border-site-bg/60 rounded-xl p-6">
@@ -129,7 +127,7 @@ export default function Home() {
             <p className="text-xs text-site-emerald font-semibold uppercase tracking-widest mb-3">Actively seeking PM roles</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-site-ink mb-4">Let&apos;s talk product</h2>
             <p className="text-site-secondary text-base mb-3 max-w-sm mx-auto leading-relaxed">
-              If you&apos;re building something where execution is the hard part, I&apos;d like to hear about it.
+              If your team is working on products where execution, adoption, or workflow friction matters, I&apos;d welcome the conversation.
             </p>
             <p className="text-site-muted text-sm mb-8">garrett.bryce.young@gmail.com</p>
             <a

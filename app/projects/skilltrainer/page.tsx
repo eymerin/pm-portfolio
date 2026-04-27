@@ -132,7 +132,7 @@ export default function SkillTrainerCaseStudy() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
             {([
               { n: "6",  label: "Major product iterations",      sub: "from original concept to what shipped" },
-              { n: null, label: "Deliberate Scope Choices",      sub: "Focused v1 on routines, session execution, onboarding, and progress systems first." },
+              { n: "Scope", label: "Deliberate tradeoffs",      sub: "core loop before expansion" },
               { n: "0",  label: "Accounts required",             sub: "loads and works immediately"           },
               { n: "4",  label: "Tabs built around user intent", sub: "Home · Skills · Sessions · Progress"   },
             ] as { n: string | null; label: string; sub: string }[]).map(s => (
@@ -350,8 +350,8 @@ export default function SkillTrainerCaseStudy() {
           <Label>Interactive Demos</Label>
           <SectionHeading>Interactive demos of the highest-leverage product decisions behind MakePerfect.</SectionHeading>
           <div className="space-y-1 text-sm text-skill-muted/50 mb-12 max-w-xl">
-            <p>These flows were designed for real mobile use and tested through working prototypes.</p>
-            <p>Each demo shows how the product improves structure, activation, execution, or retention.</p>
+            <p>The app also has an Android build, so the flows were designed for real mobile use.</p>
+            <p>Each demo focuses on a different product problem: structure, activation, execution, or retention.</p>
           </div>
 
           <div className="space-y-24">
@@ -367,8 +367,8 @@ export default function SkillTrainerCaseStudy() {
             <DemoSection
               subtitle="Product Loop"
               title="The complete practice loop"
-              problem="Most practice tools break the feedback loop. The user finishes a session and returns to the same blank state. Nothing signals that anything changed."
-              insight="Home surfaces the right action. Session executes the plan with required status per exercise — no default, so every log is honest. Session Complete rewards with rank and streak feedback. Home updates to reflect the new state. The loop closes."
+              problem="Practice tools often log effort without making progress visible. The user finishes a session, but the product doesn't clearly show what changed."
+              insight="Home recommends the next action. Session mode runs the routine with required status per exercise. Completion shows rank and streak feedback, then Home reflects the new state. The loop closes."
             >
               <SkillDashboardDemo />
             </DemoSection>
@@ -376,8 +376,8 @@ export default function SkillTrainerCaseStudy() {
             <DemoSection
               subtitle="Activation Design"
               title="Get started in under two minutes"
-              problem="A new user opens a practice app and faces a blank screen. Before anything works, they need a subject, skills, exercises, and a routine. Most quit before their first session."
-              insight="A starter pack installs a complete practice system in one tap — subject, skills, exercises, routines, and schedule. The user's only first decision is what domain they want to improve, not how to configure a data model."
+              problem="A new user should not have to build a full practice system before seeing value."
+              insight="A starter pack installs the structure for them: subject, skills, exercises, routines, and schedule. The first decision becomes what they want to improve, not how to configure the app."
             >
               <SkillOnboardingDemo />
             </DemoSection>
@@ -386,7 +386,7 @@ export default function SkillTrainerCaseStudy() {
               subtitle="Retention / Motivation"
               title="Progress that earns its meaning"
               problem="Generic XP bars reward time logged, not the behavior worth reinforcing. A system that treats a 5-minute warmup and a 45-minute session identically teaches users nothing about what matters."
-              insight="Mastery ranks are earned by completing routines, not accumulating minutes. Bronze at 20 completed routines is deliberately high — it should feel earned. Early milestones handle encouragement before the first rank lands. Tap the button to watch a rank unlock."
+              insight="Mastery ranks are earned by completing routines, not logging minutes. Bronze starts at 20 routines so it feels earned. Milestones create early momentum before the first rank unlocks."
             >
               <SkillProgressDemo />
             </DemoSection>
@@ -419,7 +419,7 @@ export default function SkillTrainerCaseStudy() {
               },
               {
                 title: "Guided setup for the cold-start problem",
-                body: "Before a session can start, the app needs a Subject, Skill, Exercise, and Routine. Onboarding handles that with domain starter packs as a one-tap shortcut for the common case.",
+                body: "The app needs structure before a session can start. Starter packs solve the cold-start problem by giving users a working system immediately.",
                 tradeoff: "Structure vs. immediacy",
               },
               {
@@ -429,12 +429,12 @@ export default function SkillTrainerCaseStudy() {
               },
               {
                 title: "localStorage only, no account",
-                body: "All data lives in localStorage. No login, no backend, no friction. The cost — no cross-device sync — is acceptable for validating the core model first.",
+                body: "All data lives locally. No login, no backend, no setup barrier. Cross-device sync can wait until the core model proves useful.",
                 tradeoff: "Accessibility vs. persistence",
               },
               {
                 title: "Universal metrics, no domain-specific fields",
-                body: "One permanent constraint: duration, reps, sets, and success tracking only. No instrument-specific or sport-specific fields, ever. Users bring domain knowledge; the product supplies structure.",
+                body: "The product stays universal by limiting metrics to duration, reps, sets, and success tracking. Users bring the domain knowledge; the product supplies the structure.",
                 tradeoff: "Universality vs. specificity",
               },
               {
@@ -491,17 +491,17 @@ export default function SkillTrainerCaseStudy() {
 
           {/* What I chose not to build yet */}
           <div className="mb-10">
-            <p className="text-xs text-skill-muted/40 uppercase tracking-wider font-medium mb-3">What I Chose Not to Build Yet</p>
+            <p className="text-xs text-skill-muted/40 uppercase tracking-wider font-medium mb-3">What I chose not to build yet</p>
             <p className="text-sm text-skill-muted/50 leading-relaxed mb-3 max-w-2xl">
-              The first version had one job: prove that structure improves consistency. Anything outside that loop got deferred.
+              The first version needed to prove the core loop: build a routine, run it, capture the result, and return. Anything outside that loop was delayed.
             </p>
             <div className="bg-skill-surface border border-skill-raised/40 rounded-xl overflow-hidden">
               <div className="divide-y divide-skill-raised/20">
                 {[
-                  ["Push notifications",        "V2, once the scheduling model is validated and the app moves to a native shell."],
-                  ["Account and sync",          "By design for MVP. No login barrier. Cross-device sync is the obvious paid tier once the habit forms."],
-                  ["Community starter packs",   "User-published templates would solve cold-start better than static packs. Deferred until accounts exist."],
-                  ["Social and coach features", "Accountability partners and instructor mode are natural expansions. Out of scope until the solo user model is validated."],
+                  ["Push notifications",        "Useful later, once scheduling behavior is validated."],
+                  ["Account and sync",          "Deferred to keep first use frictionless. Sync becomes valuable once users have history worth protecting."],
+                  ["Community starter packs",   "High upside, but only after the solo workflow is proven and accounts exist."],
+                  ["Social and coach features", "A natural expansion, but a second audience. The solo learner model comes first."],
                   ["Settings screen",           "Low impact until there's a concrete reason users need data reset or preference management."],
                 ].map(([item, reason]) => (
                   <div key={item} className="px-4 py-3 flex gap-4 items-start">
@@ -522,28 +522,28 @@ export default function SkillTrainerCaseStudy() {
           <div className="space-y-2">
             {[
               {
-                shift: "The routine layer became the core model, not a V2 add-on",
-                detail: "Assumed auto-generating sessions from cadence data would give users a plan. Learned that users wanted to control what they practice, not have it chosen for them. Switched to named routines — users define the structure, the product executes it.",
+                shift: "The routine layer became the core model",
+                detail: "Assumed cadence automation would create the practice plan. Building showed users wanted control over what they practiced. Named routines became the core model.",
               },
               {
-                shift: "Metric config moved from the exercise to the routine entry",
-                detail: "Assumed metric config belonged on the exercise. Learned the same exercise serves different purposes across routines — a reps drill here, a timed warmup there. Moved config to the entry. That's what makes the library genuinely reusable.",
+                shift: "Metric config moved to the routine entry",
+                detail: "Assumed metrics belonged on the exercise. Building showed the same exercise can serve different purposes across routines. Moving config to the entry kept the library reusable.",
               },
               {
-                shift: "The counter replaced the text input for reps and sets",
-                detail: "Assumed a number input would work. Learned that opening a keyboard mid-exercise breaks the physical flow. Built a counter sized for thumb taps — one hand on an instrument, tapping a target with the other.",
+                shift: "Counters replaced text inputs",
+                detail: "Assumed numeric input was fine. Testing the session flow made keyboard entry feel wrong. Large counters fit the moment of use.",
               },
               {
-                shift: "Domain-specific metrics were rejected permanently, not deferred",
-                detail: "Assumed instrument and sport-specific fields would add value. Learned they would fragment the product into multiple domain tools. Made the constraint permanent: duration, reps, sets, success tracking only.",
+                shift: "Domain-specific metrics were rejected permanently",
+                detail: "Assumed category-specific metrics might be useful later. Reframed them as a threat to the product's universal value.",
               },
               {
-                shift: "XP levels were replaced with mastery ranks based on completed routines",
-                detail: "Assumed XP and numeric levels would drive progression. Learned that model rewards time logged, not the behavior worth reinforcing. Switched to mastery ranks — Bronze at 20 completed routines is deliberately high.",
+                shift: "XP became mastery ranks",
+                detail: "Assumed levels would motivate. They felt generic. Ranks tied to completed routines better matched the behavior the product should reward.",
               },
               {
-                shift: "Navigation tabs were reorganized around user intent",
-                detail: "Assumed tabs organized around content (Dashboard, Library, Routines). Learned Progress data had no obvious home and users navigate by intent, not content type. Renamed to Home, Skills, Sessions, Progress — each tab answers a question.",
+                shift: "Navigation shifted to user intent",
+                detail: "The original tabs described content. The final tabs describe user questions: what to do today, what I'm building, how I train, and how I'm improving.",
               },
             ].map((item, i) => (
               <details key={item.shift} className="group bg-skill-surface border border-skill-raised/40 rounded-xl overflow-hidden">
@@ -684,16 +684,16 @@ export default function SkillTrainerCaseStudy() {
           <div className="space-y-4 max-w-2xl">
             {[
               {
-                title: "Structure matters more than motivation.",
-                body: "Most users don't fail because they lack intent. They fail because each session starts with fresh decisions.",
+                title: "Setup has to earn its place",
+                body: "You can't ask users for hard setup before they understand the payoff. The onboarding flow exists because cold-start was a sequencing problem, not a form-design problem.",
               },
               {
-                title: "Cold-start is a sequencing problem.",
-                body: "Users won't complete complex setup before seeing value. The product has to earn the right to ask for configuration.",
+                title: "Scope cuts need a reason",
+                body: "I cut push notifications, sync, and community features because they depend on the core loop working first. A cut with a reason is easier to defend and easier to revisit.",
               },
               {
-                title: "The shipped model should beat the original idea.",
-                body: "The first concept auto-generated sessions. Building it revealed users wanted ownership and repeatable routines instead.",
+                title: "The shipped model should beat the original idea",
+                body: "The original concept auto-generated sessions. Building showed users wanted ownership. The routine model came from running the product, not protecting the first idea.",
               },
             ].map(item => (
               <div key={item.title} className="border-l-2 border-skill-raised/80 pl-5">
@@ -708,8 +708,8 @@ export default function SkillTrainerCaseStudy() {
 
         {/* ── WHAT THIS PROJECT DEMONSTRATES ── */}
         <section className="mb-10">
-          <Label>What This Project Demonstrates</Label>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          <Label>PM Signals in This Project</Label>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {[
               "Product Judgment",
               "Tradeoff Decisions",
@@ -719,7 +719,6 @@ export default function SkillTrainerCaseStudy() {
               "Iteration from Learning",
               "UX Flow Design",
               "Prioritization",
-              "Mobile Product Thinking",
             ].map(comp => (
               <div key={comp} className="bg-skill-surface border border-skill-raised/40 rounded-lg px-3 py-2.5 text-xs text-skill-muted/60 font-medium text-center">
                 {comp}
@@ -730,7 +729,7 @@ export default function SkillTrainerCaseStudy() {
 
         {/* ── CTA ── */}
         <div className="bg-skill-raised/60 border border-skill-brand/20 rounded-2xl px-8 py-10 text-center">
-          <p className="text-sm text-skill-muted/50 mb-2">This project shows how I approach product problems: find friction, simplify systems, and build products people return to.</p>
+          <p className="text-sm text-skill-muted/50 mb-2">This project shows how I work through product problems: find the friction, simplify the system, and build toward repeat behavior.</p>
           <h3 className="text-xl font-bold text-skill-text mb-5">If that&apos;s relevant to what you&apos;re building, I&apos;d welcome the conversation.</h3>
           <a
             href="mailto:garrett.bryce.young@gmail.com"
