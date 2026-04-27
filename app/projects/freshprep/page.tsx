@@ -122,15 +122,17 @@ export default function FreshPrepCaseStudy() {
 
           {/* Hero stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {[
-              { n: "6",  label: "Lifecycle stages",      sub: "plan → shop → prep → schedule → consume → return" },
-              { n: "14", label: "Features cut from MVP", sub: "each with documented rationale"                    },
-              { n: "5",  label: "Retention mechanics",   sub: "onboarding · dashboard · streak · reset · benefit messaging" },
-              { n: "0",  label: "Accounts required",     sub: "works immediately on install"                      },
-            ].map((s) => (
+            {([
+              { n: "6",  label: "Lifecycle stages",    sub: "plan → shop → prep → schedule → consume → return" },
+              { n: null, label: "Focused MVP Scope",   sub: "Prioritized planning, prep logging, scheduling, and weekly follow-through first." },
+              { n: "5",  label: "Retention mechanics", sub: "onboarding · dashboard · streak · reset · benefit messaging" },
+              { n: "0",  label: "Accounts required",   sub: "works immediately on install" },
+            ] as { n: string | null; label: string; sub: string }[]).map((s) => (
               <div key={s.label} className="bg-brand-surface border border-brand-raised/40 rounded-xl p-4">
-                <p className="text-3xl font-bold text-brand-muted">{s.n}</p>
-                <p className="text-xs font-semibold text-brand-muted/70 mt-1">{s.label}</p>
+                {s.n !== null && <p className="text-3xl font-bold text-brand-muted">{s.n}</p>}
+                <p className={s.n !== null ? "text-xs font-semibold text-brand-muted/70 mt-1" : "text-sm font-semibold text-brand-muted/80 mb-1"}>
+                  {s.label}
+                </p>
                 <p className="text-xs text-brand-muted/35 mt-0.5">{s.sub}</p>
               </div>
             ))}
@@ -443,14 +445,17 @@ export default function FreshPrepCaseStudy() {
             </div>
           </div>
 
-          {/* What was cut */}
+          {/* What was delayed */}
           <div className="mb-10">
-            <p className="text-xs text-brand-muted/40 uppercase tracking-wider font-medium mb-3">Cut from MVP — each with a reason</p>
+            <p className="text-xs text-brand-muted/40 uppercase tracking-wider font-medium mb-3">What I Intentionally Delayed</p>
+            <p className="text-sm text-brand-muted/50 leading-relaxed mb-3 max-w-2xl">
+              I focused FreshPrep&apos;s first version on the week after cooking. That&apos;s the execution layer most tools ignore. Anything outside that loop got deferred.
+            </p>
             <div className="bg-brand-surface border border-brand-raised/40 rounded-xl overflow-hidden">
               <div className="divide-y divide-brand-raised/20">
                 {[
                   ["Nutrition tracking",           "Already a crowded category and not the core differentiation. This user knows what they eat."],
-                  ["Push notifications",           "V2. Infrastructure already in place via Capacitor — timing logic is next."],
+                  ["Push notifications",           "V2. Infrastructure already in place via Capacitor. Timing logic is next."],
                   ["Multi-user sharing",           "Requires a backend. Validate the solo use case before adding household complexity."],
                   ["Grocery delivery integration", "Needs a third-party API. The shopping list covers the core need without the dependency."],
                   ["Recurring plan templates",     "Valuable once the recipe library is stable. Not needed to validate the core workflow."],
@@ -466,6 +471,7 @@ export default function FreshPrepCaseStudy() {
                 ))}
               </div>
             </div>
+            <p className="text-xs text-brand-muted/40 mt-3 italic">The goal was not fewer features. It was a clearer product.</p>
           </div>
 
           {/* What changed during build — accordion */}

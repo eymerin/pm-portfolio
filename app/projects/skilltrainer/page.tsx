@@ -130,15 +130,17 @@ export default function SkillTrainerCaseStudy() {
 
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {[
+            {([
               { n: "6",  label: "Major product iterations",      sub: "from original concept to what shipped" },
-              { n: "7",  label: "Features cut from scope",       sub: "each with documented rationale"        },
+              { n: null, label: "Deliberate Scope Choices",      sub: "Focused v1 on routines, session execution, onboarding, and progress systems first." },
               { n: "0",  label: "Accounts required",             sub: "loads and works immediately"           },
               { n: "4",  label: "Tabs built around user intent", sub: "Home · Skills · Sessions · Progress"   },
-            ].map(s => (
+            ] as { n: string | null; label: string; sub: string }[]).map(s => (
               <div key={s.label} className="bg-skill-surface border border-skill-raised/40 rounded-xl p-4">
-                <p className="text-3xl font-bold text-skill-text">{s.n}</p>
-                <p className="text-xs font-semibold text-skill-muted/80 mt-1">{s.label}</p>
+                {s.n !== null && <p className="text-3xl font-bold text-skill-text">{s.n}</p>}
+                <p className={s.n !== null ? "text-xs font-semibold text-skill-muted/80 mt-1" : "text-sm font-semibold text-skill-text mb-1"}>
+                  {s.label}
+                </p>
                 <p className="text-xs text-skill-muted/35 mt-0.5">{s.sub}</p>
               </div>
             ))}
@@ -487,16 +489,19 @@ export default function SkillTrainerCaseStudy() {
             </div>
           </div>
 
-          {/* Cut */}
+          {/* What I chose not to build yet */}
           <div className="mb-10">
-            <p className="text-xs text-skill-muted/40 uppercase tracking-wider font-medium mb-3">Cut from scope — each with a reason</p>
+            <p className="text-xs text-skill-muted/40 uppercase tracking-wider font-medium mb-3">What I Chose Not to Build Yet</p>
+            <p className="text-sm text-skill-muted/50 leading-relaxed mb-3 max-w-2xl">
+              The first version had one job: prove that structure improves consistency. Anything outside that loop got deferred.
+            </p>
             <div className="bg-skill-surface border border-skill-raised/40 rounded-xl overflow-hidden">
               <div className="divide-y divide-skill-raised/20">
                 {[
                   ["Push notifications",        "V2, once the scheduling model is validated and the app moves to a native shell."],
                   ["Account and sync",          "By design for MVP. No login barrier. Cross-device sync is the obvious paid tier once the habit forms."],
                   ["Community starter packs",   "User-published templates would solve cold-start better than static packs. Deferred until accounts exist."],
-                  ["Social and coach features", "Accountability partners and instructor mode are natural expansions — out of scope until the solo user model is validated."],
+                  ["Social and coach features", "Accountability partners and instructor mode are natural expansions. Out of scope until the solo user model is validated."],
                   ["Settings screen",           "Low impact until there's a concrete reason users need data reset or preference management."],
                 ].map(([item, reason]) => (
                   <div key={item} className="px-4 py-3 flex gap-4 items-start">
@@ -509,6 +514,7 @@ export default function SkillTrainerCaseStudy() {
                 ))}
               </div>
             </div>
+            <p className="text-xs text-skill-muted/40 mt-3 italic">The best early version was the one users would actually return to.</p>
           </div>
 
           {/* What changed */}

@@ -60,15 +60,18 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-site-border/20 mb-8">
-            {[
-              { n: "4",  label: "User failure modes solved"  },
-              { n: "14", label: "Features cut w/ rationale"  },
-              { n: "3",  label: "End-to-end user workflows"  },
-              { n: "0",  label: "Accounts required to start" },
-            ].map((stat) => (
+            {([
+              { n: "4",  label: "User failure modes solved",  sub: null },
+              { n: null, label: "Scope Discipline",           sub: "Core value first. Expansion later." },
+              { n: "3",  label: "End-to-end user workflows",  sub: null },
+              { n: "0",  label: "Accounts required to start", sub: null },
+            ] as { n: string | null; label: string; sub: string | null }[]).map((stat) => (
               <div key={stat.label}>
-                <p className="text-3xl font-bold text-site-emerald">{stat.n}</p>
-                <p className="text-xs text-site-muted mt-1">{stat.label}</p>
+                {stat.n !== null && <p className="text-3xl font-bold text-site-emerald">{stat.n}</p>}
+                <p className={stat.n !== null ? "text-xs text-site-muted mt-1" : "text-sm font-semibold text-site-ink mb-1"}>
+                  {stat.label}
+                </p>
+                {stat.sub && <p className="text-xs text-site-muted mt-0.5 leading-relaxed">{stat.sub}</p>}
               </div>
             ))}
           </div>
