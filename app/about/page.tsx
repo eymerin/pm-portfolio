@@ -23,18 +23,14 @@ export default function About() {
 
         <div className="bg-site-surface rounded-xl border border-site-border/25 p-7">
           <p className="text-xs text-site-emerald uppercase tracking-wider font-semibold mb-4">Why I Built a Portfolio</p>
-          <p className="text-site-secondary leading-relaxed mb-3">
-            I didn&apos;t want to rely only on resumes or interviews to explain how I think.
+          <p className="text-site-secondary leading-relaxed mb-4">
+            I build products because it sharpens judgment faster than talking about product in the abstract.
           </p>
           <p className="text-site-secondary leading-relaxed mb-4">
-            It&apos;s easy to say you care about product decisions. It&apos;s harder to show your judgment through
-            something real. I started building products so hiring managers could see how I approach scope,
-            tradeoffs, and execution.
+            The goal of this portfolio is to show how I frame problems, make tradeoffs, and turn product thinking into working software.
           </p>
           <p className="text-site-secondary leading-relaxed mb-4">
-            FreshPrep is one example. It began with a practical problem around meal prep consistency and became
-            a fully functional Android app built for personal use, with a clear MVP boundary, intentional
-            feature cuts, and documented reasoning behind major decisions.
+            FreshPrep started as a practical problem around meal prep consistency and became a working Android app focused on weekly follow-through. MakePerfect explores a different problem: structured practice for people who already show up but still are not improving.
           </p>
           <p className="text-site-secondary leading-relaxed mb-4">My portfolio is meant to show the parts of product work that matter most to me:</p>
           <ul className="space-y-1.5 mb-0">
@@ -56,7 +52,7 @@ export default function About() {
         <div className="bg-site-surface rounded-xl border border-site-border/25 p-7">
           <p className="text-xs text-site-emerald uppercase tracking-wider font-semibold mb-4">What I Like Working On</p>
           <p className="text-site-secondary leading-relaxed mb-4">
-            I&apos;m especially interested in products that help people follow through.
+            I&apos;m especially interested in products that help people follow through when the hard part is execution, not intent.
           </p>
           <p className="text-site-secondary leading-relaxed mb-4">
             A lot of software promises value but asks too much from the user. Setup takes too long, workflows
@@ -80,12 +76,8 @@ export default function About() {
             it deserves consideration. If it distracts from that outcome, creates complexity too early, or
             depends on something unproven, it can wait.
           </p>
-          <p className="text-site-secondary leading-relaxed mb-4">
-            Some of the best product decisions are the features that stay out of version one.
-          </p>
           <p className="text-site-secondary leading-relaxed">
-            In FreshPrep, several ideas were intentionally deferred so the first version could stay simple,
-            usable, and valuable from day one. I see that kind of restraint as part of good product judgment.
+            Some of the best product decisions are the things that stay out of version one. I&apos;m drawn to focused products where the core workflow is clear before the roadmap expands.
           </p>
         </div>
 

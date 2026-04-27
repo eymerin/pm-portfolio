@@ -21,8 +21,11 @@ export default function Projects() {
             <div className="flex items-start justify-between gap-6 flex-wrap">
               <div className="flex-1 min-w-60">
                 <h2 className="text-xl font-bold text-site-ink mb-2">FreshPrep</h2>
-                <p className="text-sm text-site-secondary leading-relaxed max-w-md">
-                  A meal prep execution system built for the week after cooking. Most tools stop at the shopping list. FreshPrep tracks what you made, what&apos;s still fresh, and how to use it across the week. Shipped as an Android app.
+                <p className="text-sm text-site-secondary leading-relaxed max-w-md mb-3">
+                  A meal prep system built for the part most tools ignore: the week after cooking.
+                </p>
+                <p className="text-xs text-site-muted max-w-md">
+                  <span className="text-site-emerald font-semibold">PM Signal:</span> Lifecycle design, recurring retention, workflow simplification.
                 </p>
               </div>
               <span className="text-sm text-site-muted group-hover:text-site-emerald transition-colors font-medium self-center shrink-0">
@@ -37,8 +40,11 @@ export default function Projects() {
             <div className="flex items-start justify-between gap-6 flex-wrap">
               <div className="flex-1 min-w-60">
                 <h2 className="text-xl font-bold text-site-ink mb-2">MakePerfect</h2>
-                <p className="text-sm text-site-secondary leading-relaxed max-w-md">
-                  A structured practice system for people who already show up but aren&apos;t improving. Unstructured effort doesn&apos;t compound. MakePerfect gives the session a plan before it starts. Works in browser with an Android build.
+                <p className="text-sm text-site-secondary leading-relaxed max-w-md mb-3">
+                  A structured practice system for people who already show up but still are not improving.
+                </p>
+                <p className="text-xs text-site-muted max-w-md">
+                  <span className="text-site-emerald font-semibold">PM Signal:</span> Activation design, motivation systems, product loops.
                 </p>
               </div>
               <span className="text-sm text-site-muted group-hover:text-indigo-400 transition-colors font-medium self-center shrink-0">
