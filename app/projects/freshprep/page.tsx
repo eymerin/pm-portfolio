@@ -33,14 +33,13 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
 }
 
 function DemoSection({
-  number, title, problem, insight, children,
+  title, problem, insight, children,
 }: {
-  number: string; title: string; problem: string; insight: string; children: React.ReactNode;
+  title: string; problem: string; insight: string; children: React.ReactNode;
 }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
       <div className="lg:sticky lg:top-24">
-        <p className="text-xs text-brand-accent font-semibold uppercase tracking-wider mb-2">Demo {number} of 4</p>
         <h3 className="text-lg font-bold text-brand-muted mb-5">{title}</h3>
         <div className="space-y-4">
           <div className="border-l-2 border-brand-raised/80 pl-4">
@@ -311,7 +310,6 @@ export default function FreshPrepCaseStudy() {
 
           <div className="space-y-20">
             <DemoSection
-              number="01"
               title="Plan with flexibility, commit at prep time"
               problem="Users planning ahead don't always know which recipe they'll actually make. Forcing a single choice at plan time creates friction and inaccurate records."
               insight="Select multiple options at plan time; commit to one at prep time when the decision is actually made. Flexible intent, precise record."
@@ -320,7 +318,6 @@ export default function FreshPrepCaseStudy() {
             </DemoSection>
 
             <DemoSection
-              number="02"
               title="Know exactly what's ready"
               problem="Without a visible inventory, users forget what they prepped, miss expiration windows, and repeat the same meal because they can't see their options."
               insight="The prep batch is stateful — not a note. Quantity, storage type, and freshness status are always visible. Prevents all four failure modes without requiring extra user action."
@@ -329,7 +326,6 @@ export default function FreshPrepCaseStudy() {
             </DemoSection>
 
             <DemoSection
-              number="03"
               title="Schedule from inventory, not from ideas"
               problem="Without a scheduling layer over a real inventory, users eat whatever's most visible. Variety and intention get lost by Tuesday."
               insight="The calendar is a consumption interface over real inventory — not an abstract planner. Swap is always available; eaten meals lock out of further changes."
@@ -338,7 +334,6 @@ export default function FreshPrepCaseStudy() {
             </DemoSection>
 
             <DemoSection
-              number="04"
               title="The weekly return loop"
               problem="A meal prep tool that helps once but doesn't bring users back every week has a retention problem, not a feature problem. First-time activation is straightforward. Designing for the weekly return habit is the harder challenge."
               insight="The dashboard surfaces a single most-relevant next action — not a list of alerts. A streak tracker rewards consistent weeks. A reset prompt fires Sunday evening when the prior week went well and no new plan exists. Prep sessions end with 'Covered through Thursday' instead of 'Logged.' These work together as a coordinated return loop, not separate features."
