@@ -527,18 +527,15 @@ export default function SkillTrainerCaseStudy() {
                 shift: "Navigation shifted to user intent",
                 detail: "The original tabs described content. The final tabs describe user questions: what to do today, what I'm building, how I train, and how I'm improving.",
               },
-            ].map((item, i) => (
+            ].map((item) => (
               <details key={item.shift} className="group bg-skill-surface border border-skill-raised/40 rounded-xl overflow-hidden">
                 <summary className="flex gap-3 items-center px-4 py-3.5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-                  <div className="w-6 h-6 rounded-full bg-skill-raised border border-skill-brand/40 text-skill-brand text-xs font-bold flex items-center justify-center shrink-0">
-                    {i + 1}
-                  </div>
                   <h4 className="text-sm font-semibold text-skill-text flex-1">{item.shift}</h4>
                   <svg className="w-4 h-4 text-skill-muted/30 group-open:rotate-180 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <div className="px-4 pb-4 pt-1 ml-9">
+                <div className="px-4 pb-4 pt-1">
                   <p className="text-sm text-skill-muted/60 leading-relaxed">{item.detail}</p>
                 </div>
               </details>
