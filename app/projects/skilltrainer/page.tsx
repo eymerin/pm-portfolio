@@ -128,7 +128,7 @@ export default function SkillTrainerCaseStudy() {
             </p>
           </div>
 
-          <
+          <a
             href="#demos"
             className="inline-flex items-center gap-2 text-sm text-skill-brand border border-skill-brand/30 px-4 py-2 rounded-full hover:bg-skill-brand/10 transition-colors font-medium"
           >

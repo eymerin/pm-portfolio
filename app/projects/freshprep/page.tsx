@@ -122,7 +122,7 @@ export default function FreshPrepCaseStudy() {
             </p>
           </div>
 
-          <
+          <a
             href="#demos"
             className="inline-flex items-center gap-2 text-sm text-brand-accent border border-brand-accent/30 px-4 py-2 rounded-full hover:bg-brand-accent/10 transition-colors font-medium"
           >
