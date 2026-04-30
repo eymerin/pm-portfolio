@@ -63,8 +63,9 @@ function DemoSection({
 /* ── Page nav ─────────────────────────────────────────────── */
 const NAV_LINKS = [
   { href: "#problem",   label: "Problem"    },
-  { href: "#market",    label: "Market"     },
-  { href: "#insight",   label: "Insight"    },
+  { href: "#market",        label: "Market"        },
+  { href: "#business-case", label: "Business Case" },
+  { href: "#insight",       label: "Insight"       },
   { href: "#demos",     label: "Demos"      },
   { href: "#decisions", label: "Decisions"  },
   { href: "#scope",     label: "Scope"      },
@@ -163,9 +164,16 @@ export default function FreshPrepCaseStudy() {
           <Label>The Opportunity</Label>
           <SectionHeading>A gap the existing market doesn&apos;t own.</SectionHeading>
 
-          <p className="text-brand-muted/60 leading-relaxed mb-8 max-w-2xl">
+          <p className="text-brand-muted/60 leading-relaxed mb-6 max-w-2xl">
             Food apps address what you eat or what to cook. None address the execution layer between cooking and consuming — inventory, freshness, scheduling, and follow-through.
           </p>
+
+          <div className="bg-brand-surface border border-brand-raised/40 rounded-xl px-5 py-5 mb-8">
+            <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-3">Market Context</p>
+            <p className="text-sm text-brand-muted/60 leading-relaxed max-w-2xl">
+              The health and nutrition app market is large, competitive, and concentrated around two workflows: planning what to eat and logging what you ate. Both categories are crowded and well-funded. The operational layer between them is barely addressed: tracking what you made, managing freshness, scheduling consumption across the week. That gap is where FreshPrep operates.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             {[
@@ -238,6 +246,70 @@ export default function FreshPrepCaseStudy() {
                 <p className="text-sm text-brand-muted/60 leading-relaxed">{item.body}</p>
               </Card>
             ))}
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* ── BUSINESS CASE ── */}
+        <section id="business-case" className="mb-16">
+          <Label>Business Case</Label>
+          <SectionHeading>The design centers on one metric: weekly return.</SectionHeading>
+
+          <p className="text-brand-muted/60 leading-relaxed mb-4 max-w-2xl">
+            In subscription and freemium products, value is a function of how long users stay, not just how many sign up. Health and fitness apps have some of the highest early churn rates across categories. Week-4 retention for the median product in this space regularly falls into single-digit percentages (Mixpanel Product Benchmarks). Most users leave before the product has had a chance to prove its value.
+          </p>
+
+          <p className="text-brand-muted/60 leading-relaxed mb-8 max-w-2xl">
+            FreshPrep&apos;s design targets that window directly. The weekly return loop, coverage language, streak tracking, and reset prompts all exist to push past the early drop-off point and make repeat use the natural outcome of a good first session.
+          </p>
+
+          {/* Visual 1 — Modeled Impact Callout */}
+          <div className="bg-brand-raised rounded-2xl px-7 py-8 mb-8 border border-brand-accent/20">
+            <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-1">Modeled Impact</p>
+            <p className="text-xs text-brand-muted/30 italic mb-5">Illustrative model only. All figures are assumed, not measured. Based on Mixpanel health app retention benchmarks.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              {[
+                { value: "~15%",       label: "Assumed baseline week-2 retention",               note: "Within Mixpanel health/fitness benchmarks"                               },
+                { value: "+10pp",      label: "Modeled improvement from habit loop design",      note: "Based on Amplitude research into activation and early retention patterns" },
+                { value: "+100 users", label: "Additional retained users per 1,000 signups",     note: "At the modeled improvement rate"                                         },
+              ].map(item => (
+                <div key={item.label} className="bg-brand-surface/60 rounded-xl px-4 py-4">
+                  <p className="text-2xl font-bold text-brand-accent mb-1">{item.value}</p>
+                  <p className="text-xs font-medium text-brand-muted/70 mb-1">{item.label}</p>
+                  <p className="text-xs text-brand-muted/30 leading-relaxed">{item.note}</p>
+                </div>
+              ))}
+            </div>
+            <div className="border-t border-brand-raised/60 pt-5">
+              <p className="text-xs text-brand-muted/50 leading-relaxed max-w-2xl">
+                At a hypothetical 5% conversion to paid ($5/month), 100 additional retained users per cohort adds $25 MRR. That repeats with every new signup cohort. The more durable business effect is habit formation: users who complete a second or third prep cycle have demonstrated the weekly behavior the product is designed to reinforce.
+              </p>
+            </div>
+          </div>
+
+          {/* Visual 2 — Product to Metric Mapping */}
+          <p className="text-xs text-brand-accent font-semibold uppercase tracking-widest mb-4">How product decisions connect to metrics</p>
+          <div className="overflow-hidden rounded-xl border border-brand-raised/40">
+            <div className="grid grid-cols-3 bg-brand-raised px-4 py-2.5">
+              <p className="text-xs font-semibold text-brand-muted/40 uppercase tracking-wider">Product Decision</p>
+              <p className="text-xs font-semibold text-brand-muted/40 uppercase tracking-wider">Metric Affected</p>
+              <p className="text-xs font-semibold text-brand-muted/40 uppercase tracking-wider">Business Value</p>
+            </div>
+            <div className="divide-y divide-brand-raised/20">
+              {[
+                { decision: "Benefit-first completion language", metric: "Week 2 return rate",         value: "Users leave each session with forward momentum, not just a log entry"          },
+                { decision: "Weekly reset prompt",               metric: "Week-over-week retention",   value: "Surfaces re-engagement at the moment when habit is most at risk"               },
+                { decision: "Freshness tracking",               metric: "Expired meal rate, trust",   value: "Removes the main failure mode that causes users to stop using the app"         },
+                { decision: "Streak and coverage estimates",    metric: "Long-term consistency",      value: "Makes continued use the natural outcome of using the product correctly"         },
+              ].map((row) => (
+                <div key={row.decision} className="grid grid-cols-3 gap-4 px-4 py-3.5">
+                  <p className="text-sm font-medium text-brand-muted/80">{row.decision}</p>
+                  <p className="text-sm text-brand-muted/60">{row.metric}</p>
+                  <p className="text-sm text-brand-muted/50 leading-relaxed">{row.value}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
