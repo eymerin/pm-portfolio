@@ -36,12 +36,12 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href="/resume.pdf"
+            href="/Garrett_Young_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm px-4 py-1.5 bg-site-warm text-white rounded-full hover:bg-site-warm/80 transition-colors font-semibold"
+            className="text-sm text-site-secondary hover:text-site-ink transition-colors"
           >
-            Resume
+            Resume ↗
           </a>
         </nav>
 
@@ -76,12 +76,12 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="/resume.pdf"
+              href="/Garrett_Young_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm px-4 py-2 bg-site-warm text-white rounded-full hover:bg-site-warm/80 transition-colors font-semibold text-center"
+              className="text-sm text-site-secondary hover:text-site-ink transition-colors"
             >
-              Resume
+              Resume ↗
             </a>
           </nav>
         </div>

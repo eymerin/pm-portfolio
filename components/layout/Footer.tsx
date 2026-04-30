@@ -10,6 +10,9 @@ export default function Footer() {
           <a href="https://linkedin.com/in/garrettyoung" target="_blank" rel="noopener noreferrer" className="hover:text-site-ink transition-colors">
             LinkedIn
           </a>
+          <a href="/Garrett_Young_Resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-site-ink transition-colors">
+            Resume ↗
+          </a>
         </div>
       </div>
     </footer>
