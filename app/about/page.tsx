@@ -10,10 +10,10 @@ export default function About() {
       <h1 className="text-3xl sm:text-4xl font-bold text-site-ink leading-tight mb-6">About Me</h1>
 
       <p className="text-site-secondary text-base sm:text-lg leading-relaxed mb-4">
-        I come from technical support, implementation, and customer-facing operations — the side of software where product decisions meet reality.
+        I come from technical support, implementation, and customer-facing operations — the side of software where product decisions meet real-world use.
       </p>
       <p className="text-site-secondary leading-relaxed mb-4">
-        Working directly with users taught me where friction lives, where workflows break, and which requests are symptoms versus real opportunities.
+        Working directly with users taught me where friction builds, where workflows break down, and which requests are symptoms rather than real opportunities.
       </p>
       <p className="text-site-secondary leading-relaxed mb-14">
         I&apos;m pursuing product roles because I already think in product terms: user pain, prioritization, tradeoffs, workflows, and outcomes.
@@ -24,13 +24,13 @@ export default function About() {
         <div className="bg-site-surface rounded-xl border border-site-border/25 p-7">
           <p className="text-xs text-site-emerald uppercase tracking-wider font-semibold mb-4">Why I Built a Portfolio</p>
           <p className="text-site-secondary leading-relaxed mb-4">
-            I build products because it sharpens judgment faster than talking about product in the abstract.
+            I build products because nothing sharpens judgment faster than turning ideas into something real.
           </p>
           <p className="text-site-secondary leading-relaxed mb-4">
-            The goal of this portfolio is to show how I frame problems, make tradeoffs, and turn product thinking into working software.
+            This portfolio is meant to show how I frame problems, make tradeoffs, and turn product thinking into working software.
           </p>
           <p className="text-site-secondary leading-relaxed mb-4">
-            FreshPrep started as a practical problem around meal prep consistency and became a working Android app focused on weekly follow-through. MakePerfect explores a different problem: structured practice for people who already show up but still are not improving.
+            FreshPrep started as a practical problem around meal prep consistency and became a working Android app focused on weekly follow-through. MakePerfect explores a different kind of follow-through: structured practice for people who already show up but still are not improving.
           </p>
           <p className="text-site-secondary leading-relaxed mb-4">My portfolio is meant to show the parts of product work that matter most to me:</p>
           <ul className="space-y-1.5 mb-0">
@@ -56,11 +56,11 @@ export default function About() {
           </p>
           <p className="text-site-secondary leading-relaxed mb-4">
             A lot of software promises value but asks too much from the user. Setup takes too long, workflows
-            are clunky, or habits break because the product creates too much friction. Improving adoption and
-            completion rates can be more valuable than adding another feature.
+            get clunky, and habits break because the product creates too much friction. Improving adoption and
+            completion can be more valuable than adding another feature.
           </p>
           <p className="text-site-secondary leading-relaxed">
-            I also enjoy products built around systems that change over time. Inventory, schedules, progress
+            I also enjoy products built around systems that change over time: inventory, schedules, progress
             tracking, recurring workflows, and anything where people need confidence that the current state is
             accurate. Those products reward careful thinking and clear UX.
           </p>

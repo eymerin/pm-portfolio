@@ -121,10 +121,10 @@ export default function SkillTrainerCaseStudy() {
             </div>
 
             <p className="text-base sm:text-xl text-skill-muted/80 max-w-2xl leading-relaxed mb-3">
-              A universal structured practice system for people who already show up — but still aren&apos;t improving.
+              A universal structured practice system for people who already show up, but still are not improving.
             </p>
             <p className="text-sm text-skill-muted/40 max-w-xl">
-              Built solo. Working product with web and Android builds. Designed to work across any skill.
+              Built solo as a working product with web and Android builds, designed to support progress across any skill.
             </p>
           </div>
 
@@ -144,29 +144,29 @@ export default function SkillTrainerCaseStudy() {
           <SectionHeading>People practice consistently. Improvement still stalls.</SectionHeading>
 
           <p className="text-skill-muted/60 leading-relaxed mb-2 max-w-2xl">
-            The failure mode isn&apos;t missing sessions. It&apos;s what happens inside them. No plan means decisions get made under pressure. Familiar exercises win. The ones that matter get deferred.
+            The failure mode is not missing sessions. It is what happens inside them. When there is no plan, decisions get made under pressure. Familiar exercises win, and the ones that matter get deferred.
           </p>
           <p className="text-skill-muted/40 text-sm mb-8 max-w-xl italic">
-            Effort without structure produces effort without progress.
+            Effort without structure can still leave progress unclear.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             {[
               {
                 title: "Practice drift",
-                body: "Without a predefined plan, users work on what feels comfortable. The exercises that drive real improvement are the ones hardest to start — so they get dropped.",
+                body: "Without a predefined plan, users work on what feels comfortable. The exercises that drive improvement are often the hardest to start, so they get dropped.",
               },
               {
                 title: "Unclear structure",
-                body: "Most learners can't answer what to practice first, how long to spend, or what a complete session actually looks like.",
+                body: "Most learners cannot answer what to practice first, how long to spend, or what a complete session should look like.",
               },
               {
                 title: "No record of what happened",
-                body: "A full session and one where they bailed on three exercises look identical. Without exercise-level status, sessions are just a block of time with no usable signal.",
+                body: "A full session and one where they skipped three exercises can look identical. Without exercise-level status, sessions become blocks of time with little usable signal.",
               },
               {
                 title: "Invisible inconsistency",
-                body: "Without tracking planned versus actual, patterns of drift are invisible until the habit is already gone.",
+                body: "Without tracking planned versus actual practice, patterns of drift stay invisible until the habit is already weakening.",
               },
             ].map(item => (
               <Card key={item.title}>
@@ -215,7 +215,7 @@ export default function SkillTrainerCaseStudy() {
             {[
               {
                 title: "Habit trackers measure attendance, not quality",
-                body: "The serious practitioner already has consistency. They need quality and progression — neither of which attendance data captures.",
+                body: "The serious practitioner often already has consistency. What they need is quality and progression, neither of which attendance data captures.",
               },
               {
                 title: "Domain apps fragment multi-skill users",
@@ -306,15 +306,15 @@ export default function SkillTrainerCaseStudy() {
             {[
               {
                 title: "Universal over domain-specific",
-                body: "One system for any skill. User brings domain knowledge; product supplies structure. Metrics live on routine entries, not exercises — that's what keeps the library reusable.",
+                body: "One system can support any skill because the user brings the domain knowledge and the product supplies structure. Metrics live on routine entries, not exercises, which keeps the library reusable.",
               },
               {
                 title: "Structure before the session",
-                body: "A routine names the exercises, configures tracking, and schedules days. When you start, the plan already exists.",
+                body: "A routine names the exercises, configures tracking, and schedules the days. When a session starts, the plan already exists.",
               },
               {
                 title: "Hard data over subjective ratings",
-                body: "Completion status, reps, sets, duration. All observable. Difficulty ratings were cut — they become noise and don't accumulate into signal.",
+                body: "Completion status, reps, sets, and duration are all observable. Difficulty ratings were cut because they become noise and do not accumulate into useful signal.",
               },
             ].map(item => (
               <Card key={item.title}>
@@ -340,8 +340,8 @@ export default function SkillTrainerCaseStudy() {
             <DemoSection
               subtitle="System Design"
               title="Build a repeatable routine"
-              problem="An exercise library doesn't tell you how to train. The same exercise can be a warmup rep, a technique drill, or an endurance set — different targets, different tracking, different purpose."
-              insight="Metric config belongs on the routine entry, not the exercise. The library stays reusable. Each routine defines exactly how to execute each exercise in that context. Configure once, run every session."
+              problem="An exercise library does not tell you how to train. The same exercise can be a warmup, a technique drill, or an endurance set, each with different targets and tracking needs."
+              insight="Metric configuration belongs on the routine entry, not the exercise. The library stays reusable, while each routine defines how that exercise should be performed in context. Configure once, run every session."
             >
               <SkillRoutineDemo />
             </DemoSection>
@@ -349,8 +349,8 @@ export default function SkillTrainerCaseStudy() {
             <DemoSection
               subtitle="Product Loop"
               title="The complete practice loop"
-              problem="Practice tools often log effort without making progress visible. The user finishes a session, but the product doesn't clearly show what changed."
-              insight="Home recommends the next action. Session mode runs the routine with required status per exercise. Completion shows rank and streak feedback, then Home reflects the new state. The loop closes."
+              problem="Practice tools often log effort without making progress visible. The user finishes a session, but the product does not clearly show what changed."
+              insight="Home recommends the next action. Session mode runs the routine with required status per exercise. Completion shows rank and streak feedback, and Home reflects the new state. The loop closes."
             >
               <SkillDashboardDemo />
             </DemoSection>
@@ -358,8 +358,8 @@ export default function SkillTrainerCaseStudy() {
             <DemoSection
               subtitle="Activation Design"
               title="Get started in under two minutes"
-              problem="A new user should not have to build a full practice system before seeing value."
-              insight="A starter pack installs the structure for them: subject, skills, exercises, routines, and schedule. The first decision becomes what they want to improve, not how to configure the app."
+              problem="A new user should not have to build a full practice system before they see value."
+              insight="A starter pack installs the structure for them: subject, skills, exercises, routines, and schedule. Their first decision becomes what they want to improve, not how to configure the app."
             >
               <SkillOnboardingDemo />
             </DemoSection>
@@ -367,8 +367,8 @@ export default function SkillTrainerCaseStudy() {
             <DemoSection
               subtitle="Retention / Motivation"
               title="Progress that earns its meaning"
-              problem="Generic XP bars reward time logged, not the behavior worth reinforcing. A system that treats a 5-minute warmup and a 45-minute session identically teaches users nothing about what matters."
-              insight="Mastery ranks are earned by completing routines, not logging minutes. Bronze starts at 20 routines so it feels earned. Milestones create early momentum before the first rank unlocks."
+              problem="Generic XP bars reward time logged, not the behavior worth reinforcing. If a system treats a 5-minute warmup and a 45-minute session identically, it teaches users very little about what matters."
+              insight="Mastery ranks are earned by completing routines, not logging minutes. Bronze starts at 20 routines so it feels earned, while milestones create early momentum before the first rank unlocks."
             >
               <SkillProgressDemo />
             </DemoSection>
@@ -386,17 +386,17 @@ export default function SkillTrainerCaseStudy() {
             {[
               {
                 title: "Routine-first model",
-                body: "Every session runs against a named routine. You can't start without one — the practice plan must exist before you sit down. The tradeoff is upfront setup; onboarding handles that transition.",
+                body: "Every session runs against a named routine. Users cannot start without one because the practice plan has to exist before the session begins. The tradeoff is upfront setup, which onboarding is designed to reduce.",
                 tradeoff: "Structure vs. flexibility",
               },
               {
                 title: "Metric config on the entry, not the exercise",
-                body: "The same exercise tracks differently in different routines. A scale run by reps in technique practice is different from the same run by duration in a warmup. Config on the entry, not the exercise, is what makes the library genuinely reusable.",
+                body: "The same exercise tracks differently in different routines. A scale run tracked by reps in technique practice is different from the same run tracked by duration in a warmup. Config on the entry, not the exercise, is what makes the library genuinely reusable.",
                 tradeoff: "Reusability vs. simplicity",
               },
               {
                 title: "Counter buttons, not text inputs",
-                body: "Reps and sets use a counter sized for thumb taps. Keyboard input during active practice is friction. When both are configured, hitting the rep target auto-increments sets — the user doesn't manage the transition.",
+                body: "Reps and sets use a counter sized for thumb taps. Keyboard input during active practice creates friction. When both are configured, hitting the rep target auto-increments sets — the user doesn't manage the transition.",
                 tradeoff: "Speed vs. precision",
               },
               {
@@ -421,7 +421,7 @@ export default function SkillTrainerCaseStudy() {
               },
               {
                 title: "Mastery ranks replaced XP levels",
-                body: "XP rewards time logged, not the behavior worth reinforcing. Mastery ranks are earned by completing routines. Bronze at 20 is deliberately high — earned, not automatic.",
+                body: "XP rewards time logged, not the behavior worth reinforcing. Mastery ranks are earned by completing routines, with Bronze set high enough to feel earned rather than automatic.",
                 tradeoff: "Intrinsic motivation vs. gamification",
               },
             ].map(item => (
@@ -708,7 +708,7 @@ export default function SkillTrainerCaseStudy() {
 
         {/* ── CTA ── */}
         <div className="bg-skill-raised/60 border border-skill-brand/20 rounded-2xl px-8 py-10 text-center">
-          <p className="text-sm text-skill-muted/50 mb-2">This project shows how I work through product problems: find the friction, simplify the system, and build toward repeat behavior.</p>
+          <p className="text-sm text-skill-muted/50 mb-2">This project reflects how I work through product problems: find the friction, simplify the system, and build toward repeat behavior.</p>
           <h3 className="text-xl font-bold text-skill-text mb-5">If that&apos;s relevant to what you&apos;re building, I&apos;d welcome the conversation.</h3>
           <a
             href="mailto:garrett.bryce.young@gmail.com"

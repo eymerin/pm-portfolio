@@ -115,7 +115,7 @@ export default function FreshPrepCaseStudy() {
             </div>
 
             <p className="text-base sm:text-xl text-brand-muted/70 max-w-2xl leading-relaxed mb-3">
-              A meal prep system built for the part most tools ignore: the week after cooking.<br />Turn one prep session into multiple successful weekdays.
+              A meal prep system built for the part most tools overlook: the week after cooking.<br />Turn one prep session into a week that runs more smoothly.
             </p>
             <p className="text-sm text-brand-muted/40 max-w-xl">
               Built solo. Working product with Android build and mobile-first workflows.
@@ -138,15 +138,15 @@ export default function FreshPrepCaseStudy() {
           <SectionHeading>Meal prep breaks down after cooking, not before it.</SectionHeading>
 
           <p className="text-brand-muted/60 leading-relaxed mb-8 max-w-2xl">
-            The bottleneck isn&apos;t motivation or missing recipes. It&apos;s the operational layer that starts the moment cooking ends: knowing what you made, whether it&apos;s still safe, what&apos;s scheduled for which day, and how to course-correct when Tuesday&apos;s plan falls apart.
+            The bottleneck is not motivation or missing recipes. It is the operational layer that starts once cooking ends: knowing what you made, whether it is still safe, what is scheduled for each day, and how to course-correct when Tuesday&apos;s plan falls apart.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { title: "Planning without follow-through",  body: "They decide Sunday to make chicken bowls. By Wednesday they've forgotten what they planned, how many servings, and what's still in the fridge." },
-              { title: "Shopping from memory",             body: "No scaled quantity list, no category sorting. Items get duplicated or forgotten. Shopping takes longer than it needs to." },
-              { title: "Cooking without logging",          body: "They cook but don't record what they made, when, or how much. By day four, they're guessing whether the chicken is still safe." },
-              { title: "Eating without inventory",         body: "With nothing tracking what's available, they default to the same meal repeatedly — missing variety they actually prepped." },
+              { title: "Planning without follow-through",  body: "They decide on Sunday to make chicken bowls. By Wednesday, they have forgotten what they planned, how many servings are left, and what is still in the fridge." },
+              { title: "Shopping from memory",             body: "Without scaled quantities or category sorting, items get duplicated or forgotten and shopping takes longer than it needs to." },
+              { title: "Cooking without logging",          body: "They cook, but do not record what they made, when they made it, or how much is available. By day four, they are guessing whether the chicken is still safe." },
+              { title: "Eating without inventory",         body: "When nothing tracks what is available, they default to the same meal repeatedly and miss variety they already prepped." },
             ].map((item) => (
               <Card key={item.title}>
                 <h4 className="text-sm font-semibold text-brand-muted mb-1.5">{item.title}</h4>
@@ -253,7 +253,7 @@ export default function FreshPrepCaseStudy() {
               &ldquo;The unit of value isn&apos;t the recipe.<br />It&apos;s the prepped batch.&rdquo;
             </p>
             <p className="text-sm text-brand-muted/60 max-w-xl leading-relaxed">
-              A prep batch has a quantity, a storage type, a shelf life, and a freshness status. It gets planned, shopped for, cooked, scheduled, and consumed. Every screen either creates that object or acts on it. Once I named this, the architecture became obvious.
+              A prep batch has a quantity, a storage type, a shelf life, and a freshness status. It gets planned, shopped for, cooked, scheduled, and consumed. Every screen either creates that object or acts on it. Once that object was clear, the architecture became easier to reason about.
             </p>
           </div>
 
@@ -263,14 +263,14 @@ export default function FreshPrepCaseStudy() {
               First-time activation is easy. Weekly return behavior is the real design challenge.
             </p>
             <p className="text-sm text-brand-muted/60 max-w-xl leading-relaxed">
-              A meal prep tool is only useful if users come back every Sunday. That meant designing for the cycle — not just the first session. A dashboard that surfaces the one most-relevant next action. A streak tracker that rewards consistency. A reset prompt that fires at the right moment. Prep sessions that end with &ldquo;Covered through Thursday&rdquo; instead of &ldquo;Logged.&rdquo;
+              A meal prep tool is only useful if users come back the next week. That meant designing for the full cycle, not just the first session: a dashboard that surfaces the next useful action, a streak tracker that rewards consistency, a reset prompt that appears at the right moment, and prep sessions that end with &ldquo;Covered through Thursday&rdquo; instead of &ldquo;Logged.&rdquo;
             </p>
           </div>
 
           <p className="text-xs text-brand-accent font-semibold uppercase tracking-widest mb-5">How that shaped the strategy</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { title: "Opinionated workflow, flexible choices", body: "The sequence is fixed: plan → shop → prep → schedule → eat. Within each step, real flexibility. Structure where it matters; freedom everywhere else." },
+              { title: "Opinionated workflow, flexible choices", body: "The sequence is fixed: plan → shop → prep → schedule → eat. Within each step, real flexibility. Structure where it matters, flexibility where real life needs it." },
               { title: "Food as a living object",               body: "A prep batch isn't a log entry. It has real-time state: servings remaining, scheduled slots, days until expiration. Every screen reflects current state." },
               { title: "Designed for weekly return",            body: "Onboarding captures prep frequency and weekly targets. The dashboard zones, streak tracking, coverage estimates, and weekly reset trigger all reinforce the recurring habit — not just the first prep session." },
             ].map((item) => (
@@ -307,7 +307,7 @@ export default function FreshPrepCaseStudy() {
               subtitle="Inventory Design"
               title="Know exactly what's ready"
               problem="Without a visible inventory, users forget what they prepped, miss expiration windows, and repeat the same meal because they can't see their options."
-              insight="The prep batch is stateful — not a note. Quantity, storage type, and freshness status are always visible. Prevents all four failure modes without requiring extra user action."
+              insight="The prep batch is stateful, not just a note. Quantity, storage type, and freshness status are always visible, which prevents the main failure modes without adding extra work."
             >
               <FreshnessInventoryDemo />
             </DemoSection>
@@ -325,7 +325,7 @@ export default function FreshPrepCaseStudy() {
               subtitle="Retention Design"
               title="The weekly return loop"
               problem="A meal prep tool has to be useful after the first prep session. The harder problem is getting users to return when the next week starts."
-              insight="The dashboard shows one useful next action, weekly progress, and momentum. Prep completion uses benefit-first language like 'Covered through Thursday.' The system is designed around the weekly return loop, not just first-time setup."
+              insight={'The dashboard shows one useful next action, weekly progress, and momentum. Prep completion uses benefit-first language like "Covered through Thursday." The system is designed around the weekly return loop, not just first-time setup.'}
             >
               <RetentionLoopDemo />
             </DemoSection>
@@ -343,17 +343,17 @@ export default function FreshPrepCaseStudy() {
             {[
               {
                 title: "Shopping gate before prep queue",
-                body: "Early design auto-converted plans to a prep queue. Changed to a user-initiated 'Send to Prep' after shopping is confirmed. Prevents prep records from appearing before the user has shopped — which corrupts the inventory and breaks trust in freshness data.",
+                body: "The early design auto-converted plans into a prep queue. I changed that to a user-initiated “Send to Prep” step after shopping is confirmed, which prevents prep records from appearing before the user has actually shopped.",
                 tradeoff: "Speed vs. accuracy",
               },
               {
                 title: "Local storage over a backend",
-                body: "All data lives on the device. No account, no signup, no sync. Removes every barrier between installing and using. The cost — no multi-device sync — is the right tradeoff for MVP.",
+                body: "All data lives on the device. No account, no signup, no sync. That removes the barrier between installing and using the app, while delaying multi-device sync until the core workflow proves useful.",
                 tradeoff: "Offline-first vs. sync",
               },
               {
                 title: "No auto-fill calendar",
-                body: "Auto-fill was considered and rejected. Users decide meal distribution after cooking, not before. An algorithm making that decision would be wrong too often — and when it's wrong, it breaks trust in the whole system.",
+                body: "I considered auto-fill and rejected it. Users decide meal distribution after cooking, not before. If an algorithm gets that wrong too often, it weakens trust in the whole schedule.",
                 tradeoff: "Automation vs. control",
               },
               {
@@ -363,7 +363,7 @@ export default function FreshPrepCaseStudy() {
               },
               {
                 title: "Coverage language over inventory counts",
-                body: "The product says 'Covered through Thursday' instead of '5 meals remaining.' Users want operational confidence, not arithmetic. The estimate derives automatically from their inventory and prep frequency preference collected at onboarding.",
+                body: "The product says \"Covered through Thursday\" instead of \"5 meals remaining\" because users want operational confidence, not arithmetic. The estimate derives automatically from their inventory and prep frequency preference collected at onboarding.",
                 tradeoff: "Clarity vs. precision",
               },
               {
@@ -373,12 +373,12 @@ export default function FreshPrepCaseStudy() {
               },
               {
                 title: "Onboarding preferences power multiple features",
-                body: "A 2-minute onboarding captures meals per week, meal types, and prep frequency. Those answers feed the weekly target progress bar, coverage estimates, and planning adherence metrics in Insights. One setup step; cascading product intelligence.",
+                body: "A short onboarding flow captures meals per week, meal types, and prep frequency. Those answers feed weekly targets, coverage estimates, and planning adherence metrics, so one setup step creates value across the product.",
                 tradeoff: "Upfront cost vs. downstream value",
               },
               {
                 title: "Progress behind a header icon, not a nav tab",
-                body: "Insights are available from the header instead of becoming another primary tab. The core workflow stays simple, while progress data remains one tap away.",
+                body: "Insights are available from the header instead of becoming another primary tab. The core workflow stays simple, and progress data remains one tap away.",
                 tradeoff: "Discoverability vs. navigation clarity",
               },
             ].map((item) => (
@@ -455,7 +455,7 @@ export default function FreshPrepCaseStudy() {
                 ))}
               </div>
             </div>
-            <p className="text-xs text-brand-muted/40 mt-3 italic">The goal was not fewer features. It was a clearer product.</p>
+            <p className="text-xs text-brand-muted/40 mt-3 italic">The goal was not to ship less. It was to keep the product clearer.</p>
           </div>
 
           {/* What changed during build — accordion */}
@@ -464,7 +464,7 @@ export default function FreshPrepCaseStudy() {
             {[
               {
                 shift: "Plan screen became a prep queue, not a schedule",
-                detail: "Originally framed as a weekly meal schedule. Building it revealed that 'what to cook' and 'what to eat on Tuesday' are different cognitive tasks that happen at different times. The plan tells you what to cook. The calendar tells you when to eat it.",
+                detail: "I originally framed the plan screen as a weekly meal schedule. Building it revealed that \"what to cook\" and \"what to eat on Tuesday\" are different decisions that happen at different times. The plan tells you what to cook; the calendar tells you when to eat it.",
               },
               {
                 shift: "Mix-and-match recipes required a second recipe type",
@@ -472,11 +472,11 @@ export default function FreshPrepCaseStudy() {
               },
               {
                 shift: "Shopping needed a deliberate handoff to prep",
-                detail: "Auto-converting a plan to a prep queue felt slick but created a real problem: prep records appearing before the user had actually shopped. The explicit 'Send to Prep' button isn't friction — it's a data integrity gate.",
+                detail: "Auto-converting a plan into a prep queue felt efficient, but it created a real problem: prep records could appear before the user had actually shopped. The explicit \"Send to Prep\" step protects the integrity of the inventory.",
               },
               {
                 shift: "The home screen evolved from a stat strip to a three-zone command center",
-                detail: "The first version was a simple stat strip. Building it showed that midweek check-ins, weekly planning, and momentum are different jobs. Splitting the dashboard into TODAY, THIS WEEK, and MOMENTUM made the screen easier to read and easier to act on.",
+                detail: "The first version was a simple stat strip. Building it showed that midweek check-ins, weekly planning, and momentum are different jobs. Splitting the dashboard into Today, This Week, and Momentum made the screen easier to read and easier to act on.",
               },
             ].map((item) => (
               <details key={item.shift} className="group bg-brand-surface border border-brand-raised/40 rounded-xl overflow-hidden">
@@ -618,7 +618,7 @@ export default function FreshPrepCaseStudy() {
 
         {/* ── CTA ── */}
         <div className="bg-brand-raised border border-brand-accent/30 rounded-2xl px-8 py-10 text-center">
-          <p className="text-sm text-brand-muted/50 mb-2">This project shows how I think about recurring real-world problems: reduce friction, build trust, and make repeat use easier.</p>
+          <p className="text-sm text-brand-muted/50 mb-2">This project reflects how I approach recurring real-world problems: reduce friction, build trust, and make repeat use easier.</p>
           <h3 className="text-xl font-bold text-brand-muted mb-5">If that&apos;s relevant to what you&apos;re building, I&apos;d welcome the conversation.</h3>
           <a
             href="mailto:garrett.bryce.young@gmail.com"

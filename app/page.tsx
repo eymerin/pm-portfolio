@@ -15,7 +15,7 @@ export default function Home() {
             into shipped products.
           </h1>
           <p className="text-base sm:text-lg text-site-secondary max-w-lg leading-relaxed mb-10">
-            With a background in design, production, and technical support, I focus on the gap between what products promise and where users actually get stuck.
+            My background spans design, production, and technical support, where I learned to spot the gap between what products promise and where users actually get stuck.
           </p>
           <div className="flex items-center gap-4 flex-wrap">
             <Link
@@ -97,15 +97,15 @@ export default function Home() {
             {[
               {
                 title: "Execution gaps, not inspiration gaps",
-                body: "The user already knows what they want to do. They can't follow through consistently. That's the problem. Most apps try to solve that with reminders or motivation. The better question is where the workflow breaks.",
+                body: "The user often knows what they want to do. The harder part is following through consistently. Most apps try to solve that with reminders or motivation, but the better question is where the workflow breaks.",
               },
               {
                 title: "Objects with a lifecycle",
-                body: "Some product objects have real state. A prep batch. A support ticket. A reservation. They get created, updated, consumed, expired. That's where UX decisions carry the most weight. That is where small UX decisions start to matter.",
+                body: "Some product objects have real state: a prep batch, a support ticket, a reservation. They get created, updated, consumed, and resolved. That is where small UX decisions start to carry real weight.",
               },
               {
                 title: "The seam between deciding and doing",
-                body: "Planning tools exist everywhere. Logging tools do too. The more interesting product gap is the handoff between deciding and doing.",
+                body: "Planning tools exist everywhere, and logging tools do too. The more interesting product gap is the handoff between deciding and actually doing.",
               },
             ].map((item) => (
               <div key={item.title} className="bg-site-bg/50 border border-site-bg/60 rounded-xl p-6">
@@ -127,7 +127,7 @@ export default function Home() {
             <p className="text-xs text-site-emerald font-semibold uppercase tracking-widest mb-3">Actively seeking PM roles</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-site-ink mb-4">Let&apos;s talk product</h2>
             <p className="text-site-secondary text-base mb-3 max-w-sm mx-auto leading-relaxed">
-              If your team is working on products where execution, adoption, or workflow friction matters, I&apos;d welcome the conversation.
+              If your team is building products where execution, adoption, or workflow friction matters, I&apos;d welcome the conversation.
             </p>
             <p className="text-site-muted text-sm mb-8">garrett.bryce.young@gmail.com</p>
             <a
