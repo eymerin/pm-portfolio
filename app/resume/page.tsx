@@ -104,11 +104,11 @@ export default function Resume() {
         <h1 className="text-3xl sm:text-4xl font-bold text-site-ink leading-tight mb-1">
           Garrett Young
         </h1>
-        <p className="text-site-secondary text-base mb-5">
+        <p className="text-site-secondary text-lg mb-5">
           Product Manager / Product-Focused Technical Professional
         </p>
 
-        <div className="text-sm text-site-muted space-y-1 mb-7">
+        <div className="text-sm text-site-muted space-y-1.5 mb-8">
           <p>South Jordan, UT</p>
           <p>
             <a href="mailto:garrett.bryce.young@gmail.com" className="hover:text-site-ink transition-colors">
@@ -151,7 +151,7 @@ export default function Resume() {
       {/* ── SUMMARY ── */}
       <section className="mb-12">
         <p className="text-xs text-site-emerald font-semibold uppercase tracking-widest mb-4">Summary</p>
-        <p className="text-site-secondary leading-relaxed">
+        <p className="text-site-secondary text-base leading-relaxed max-w-2xl">
           Product-focused technical professional with hands-on experience in SaaS product discovery,
           opportunity validation, and early-stage delivery. Rapidly promoted within a CRM company
           from Tier 1 to Tier 2 support and escalations, now partnering closely with Product and
@@ -169,24 +169,24 @@ export default function Resume() {
       <section className="mb-12">
         <p className="text-xs text-site-emerald font-semibold uppercase tracking-widest mb-8">Professional Experience</p>
 
-        <div className="space-y-10">
-          {EXPERIENCE.map((job) => (
-            <div key={job.company}>
-              <div className="mb-3">
-                <p className="text-base font-semibold text-site-ink">
+        <div className="space-y-12 divide-y divide-site-border/15">
+          {EXPERIENCE.map((job, idx) => (
+            <div key={job.company} className={idx > 0 ? "pt-12" : ""}>
+              <div className="mb-4">
+                <p className="text-base font-semibold text-site-ink mb-0.5">
                   {job.company} <span className="font-normal text-site-muted">— {job.location}</span>
                 </p>
                 {job.roles.map((role) => (
                   <p key={role.title} className="text-sm text-site-secondary mt-0.5">
                     {role.title}
-                    <span className="text-site-muted"> | {role.dates}</span>
+                    <span className="text-xs text-site-muted"> · {role.dates}</span>
                   </p>
                 ))}
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5 ml-1">
                 {job.bullets.map((bullet, i) => (
                   <li key={i} className="flex gap-3 items-start text-sm text-site-secondary leading-relaxed">
-                    <span className="w-1.5 h-1.5 rounded-full bg-site-muted mt-1.5 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-site-muted/60 mt-1.5 shrink-0" />
                     {bullet}
                   </li>
                 ))}
