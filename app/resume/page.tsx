@@ -114,10 +114,6 @@ export default function Resume() {
             <a href="mailto:garrett.bryce.young@gmail.com" className="hover:text-site-ink transition-colors">
               garrett.bryce.young@gmail.com
             </a>
-            {" · "}
-            <a href="tel:8018399110" className="hover:text-site-ink transition-colors">
-              801-839-9110
-            </a>
           </p>
           <p>
             <a
