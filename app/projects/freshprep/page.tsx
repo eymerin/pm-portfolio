@@ -115,7 +115,7 @@ export default function FreshPrepCaseStudy() {
             </div>
 
             <p className="text-base sm:text-xl text-brand-muted/70 max-w-2xl leading-relaxed mb-3">
-              A meal prep system built for the part most tools overlook: the week after cooking.<br />Turn one prep session into a week that runs more smoothly.
+              A meal prep system built for the part most tools overlook: the week after cooking. Turn one prep session into a week that runs more smoothly.
             </p>
             <p className="text-sm text-brand-muted/40 max-w-xl">
               Built solo. Working product with Android build and mobile-first workflows.
