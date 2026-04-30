@@ -83,14 +83,7 @@ export default function About() {
 
       </div>
 
-      <p className="text-site-muted text-sm mt-10 mb-6">
-        Prefer a quick overview?{" "}
-        <a href="/Garrett_Young_Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-site-accent hover:text-site-ink transition-colors">
-          View my resume ↗
-        </a>
-      </p>
-
-      <div className="flex gap-4 flex-wrap">
+      <div className="mt-10 flex gap-4 flex-wrap">
         <Link
           href="/projects/freshprep"
           className="px-6 py-3 bg-site-warm text-white text-sm font-bold rounded-full hover:bg-site-warm/85 transition-colors"
