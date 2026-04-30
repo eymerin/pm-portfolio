@@ -8,11 +8,8 @@ export default function Projects() {
     <div className="max-w-5xl mx-auto px-6 py-12 sm:py-20">
       <p className="text-xs text-site-emerald font-semibold uppercase tracking-widest mb-6">Portfolio</p>
       <h1 className="text-3xl sm:text-4xl font-bold text-site-ink leading-tight mb-4">Projects</h1>
-      <p className="text-site-secondary text-base mb-2 max-w-xl leading-relaxed">
-        I build products to explore real user problems, sharpen product judgment, and keep improving how I think.
-      </p>
       <p className="text-site-secondary text-base mb-10 sm:mb-14 max-w-xl leading-relaxed">
-        Each project explores a different product challenge: consumer retention, behavior systems, and B2B operations.
+        I build products to explore real user problems, sharpen product judgment, and keep improving how I think. Each project explores a different product challenge: consumer retention, behavior systems, and B2B operations.
       </p>
 
       <div className="space-y-4">
