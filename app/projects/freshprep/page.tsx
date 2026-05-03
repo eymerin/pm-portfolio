@@ -139,6 +139,7 @@ export default function FreshPrepCaseStudy() {
               </div>
             ))}
           </div>
+          <p className="text-xs text-brand-muted/40 max-w-xl mb-6">Large audience. Severe drop-off. Proven market value.</p>
 
           <a
             href="#demos"
@@ -263,15 +264,11 @@ export default function FreshPrepCaseStudy() {
           <SectionHeading>The design centers on one metric: weekly return.</SectionHeading>
 
           <p className="text-brand-muted/60 leading-relaxed mb-4 max-w-2xl">
-            In subscription and freemium products, value is a function of how long users stay, not just how many sign up. Health and fitness apps retain only 12% of users by Day 7 and 7% by Day 30 — among the lowest of any app category (Adjust, Mobile App Retention Benchmarks 2023). Most users leave before the product has had a chance to prove its value.
-          </p>
-
-          <p className="text-brand-muted/60 leading-relaxed mb-4 max-w-2xl">
-            FreshPrep&apos;s design targets that window directly. The weekly return loop, coverage language, streak tracking, and reset prompts all exist to push past the early drop-off point and make repeat use the natural outcome of a good first session.
+            In subscription and freemium products, value is a function of how long users stay, not just how many sign up. Health and fitness apps retain only 12% of users by Day 7 and 7% by Day 30 — among the lowest of any app category (Adjust, Mobile App Retention Benchmarks 2023). Most users leave before the product has a chance to prove its value. FreshPrep&apos;s design targets that window: the weekly return loop, coverage language, streak tracking, and reset prompts all exist to push past the early drop-off point.
           </p>
 
           <p className="text-brand-muted/60 leading-relaxed mb-8 max-w-2xl">
-            In subscription products, improving early retention directly increases lifetime value and reduces reliance on acquiring new users to maintain revenue. It&apos;s one of the highest-leverage improvements a product team can make.
+            In subscription products, early retention is the primary driver of lifetime value. Improving it increases revenue per user and reduces dependence on acquisition to maintain growth.
           </p>
 
           {/* Visual 1 — Modeled Impact Callout */}
@@ -281,7 +278,7 @@ export default function FreshPrepCaseStudy() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               {[
                 { value: "7%",        label: "Day-30 retention baseline",                  note: "Adjust benchmark for health & fitness apps (2023)"                                              },
-                { value: "2x",        label: "Modeled retention target for engaged users", note: "Assumed for users completing 2+ weekly prep cycles — consistent with Amplitude activation research" },
+                { value: "+7pp",      label: "Modeled Day-30 retention improvement",       note: "Assumed for users completing 2+ weekly prep cycles — consistent with Amplitude activation research" },
                 { value: "+70 users", label: "Additional retained users per 1,000 signups", note: "At modeled improvement rate — illustrative only"                                               },
               ].map(item => (
                 <div key={item.label} className="bg-brand-surface/60 rounded-xl px-4 py-4">
@@ -489,16 +486,12 @@ export default function FreshPrepCaseStudy() {
             </div>
             <div className="divide-y divide-brand-raised/20">
               {[
-                ["Recipe management (two distinct types)",             "Foundation — two types needed to correctly model different meal structures."],
-                ["Plan screen with flexible selection",                "Core planning workflow. Single or multi-option selection per recipe."],
-                ["Shopping list with quantity scaling",                "Auto-generates from plan, scaled by servings, sorted by store category."],
-                ["Prep logging (from queue + manual)",                 "Two paths to a prep record — planned workflow or ad-hoc."],
-                ["Prep batch inventory + freshness tracking",          "The core value proposition. Real-time state: servings, expiration, storage type."],
-                ["Calendar scheduling (daily + weekly views)",         "Distributes inventory across the week. Swap and eaten-state tracking included."],
-                ["Onboarding with preference capture",                 "3-screen setup: meals/week, meal types, prep frequency. Preferences cascade into target tracking, coverage estimates, and planning adherence metrics."],
-                ["Three-zone dashboard (TODAY / THIS WEEK / MOMENTUM)", "Each zone serves a different cognitive register. TODAY surfaces the single most-relevant next action. THIS WEEK tracks schedule progress toward the user's target. MOMENTUM shows streak and consistency data."],
-                ["Streak tracking + Insights modal",                   "Week-over-week consistency earns a visible streak. Insights (via persistent header icon) surfaces consistency, execution, and planning metrics over the user's full history."],
-                ["Full offline operation",                             "No account, no network dependency. All state in local device storage."],
+                ["Prep batch inventory + freshness tracking",           "The core value proposition. Real-time state: servings, expiration, storage type. The object every other screen acts on."],
+                ["Plan screen with flexible selection",                 "Select multiple recipe options at plan time; commit to one at prep time. Flexible intent, precise record."],
+                ["Calendar scheduling (daily + weekly views)",          "Distributes inventory across the week. Swap and eaten-state tracking included. Consumption interface over real inventory, not an abstract planner."],
+                ["Three-zone dashboard (TODAY / THIS WEEK / MOMENTUM)", "Each zone serves a different cognitive register. TODAY surfaces the next useful action. THIS WEEK tracks progress toward target. MOMENTUM shows streak and consistency."],
+                ["Onboarding with preference capture",                  "3-screen setup: meals/week, meal types, prep frequency. One setup step cascades into weekly targets, coverage estimates, and planning adherence metrics."],
+                ["Full offline operation",                              "No account, no signup, no network dependency. Removes the barrier between installing and using — multi-device sync deferred until the core workflow proves useful."],
               ].map(([feature, reason]) => (
                 <div key={feature} className="px-4 py-3 flex gap-4 items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2 shrink-0" />
