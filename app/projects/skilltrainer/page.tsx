@@ -165,8 +165,8 @@ export default function SkillTrainerCaseStudy() {
           <p className="text-skill-muted/60 leading-relaxed mb-2 max-w-2xl">
             The failure mode is not missing sessions. It is what happens inside them. When there is no plan, decisions get made under pressure. Familiar exercises win, and the ones that matter get deferred.
           </p>
-          <p className="text-skill-muted/40 text-sm mb-8 max-w-xl italic">
-            Effort without structure can still leave progress unclear.
+          <p className="text-skill-muted/60 text-sm mb-8 max-w-xl">
+            When sessions don&apos;t show visible progress, users disengage. That&apos;s not a motivation problem — it&apos;s a product design problem.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -316,6 +316,16 @@ export default function SkillTrainerCaseStudy() {
             </p>
           </div>
 
+          <div className="bg-skill-raised/70 rounded-2xl px-7 py-8 mb-8 border border-skill-brand/10">
+            <p className="text-xs text-skill-muted/40 uppercase tracking-widest font-medium mb-3">The harder problem</p>
+            <p className="text-lg font-bold text-skill-text leading-snug mb-3">
+              Getting users to their first session is a UX problem. Getting them to return after progress stalls is a product design problem.
+            </p>
+            <p className="text-sm text-skill-muted/60 max-w-xl leading-relaxed">
+              Starter packs handle the cold start. The harder challenge is week three, when novelty fades and effort starts to feel unrewarded. Mastery ranks, streak tracking, and visible completion trends all exist for that moment — not as engagement mechanics, but as evidence that the work is accumulating into something real.
+            </p>
+          </div>
+
           <p className="text-xs text-skill-brand font-semibold uppercase tracking-widest mb-5">How that shaped the strategy</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
@@ -348,11 +358,15 @@ export default function SkillTrainerCaseStudy() {
           <SectionHeading>The product has to earn the second session.</SectionHeading>
 
           <p className="text-skill-muted/60 leading-relaxed mb-4 max-w-2xl">
-            Education apps have some of the worst retention numbers of any app category. Day-30 retention sits around 3% — meaning 97 out of 100 users are gone within a month (AppsFlyer, 2022). Most leave before the product has had a chance to show what structured practice actually feels like.
+            Education apps have some of the worst retention numbers of any app category. Day-30 retention sits around 3% (AppsFlyer, 2022). The underlying cause is usually the same: users cannot see whether their effort is translating to improvement. Invisible progress leads to disengagement, and disengagement leads to churn.
+          </p>
+
+          <p className="text-skill-muted/60 leading-relaxed mb-4 max-w-2xl">
+            In freemium products, early retention is the primary driver of lifetime value. Improving it increases revenue per user and reduces the treadmill of chasing new installs to maintain growth.
           </p>
 
           <p className="text-skill-muted/60 leading-relaxed mb-8 max-w-2xl">
-            In freemium products, early retention is the primary driver of lifetime value. Improving it increases revenue per user and reduces the treadmill of chasing new installs to maintain growth.
+            The research supports the direction. A meta-analysis across 88 studies found that deliberate practice — structured, goal-directed effort with measurable feedback — explains 21% of performance variance in music and 18% in sport (Macnamara et al., 2014, Psychological Science). Most tools don&apos;t support deliberate practice. They log time. MakePerfect builds the structure that deliberate practice requires.
           </p>
 
           {/* Visual 1 — Modeled Impact */}
@@ -598,10 +612,6 @@ export default function SkillTrainerCaseStudy() {
               {
                 shift: "XP became mastery ranks",
                 detail: "Assumed levels would motivate. They felt generic. Ranks tied to completed routines better matched the behavior the product should reward.",
-              },
-              {
-                shift: "Navigation shifted to user intent",
-                detail: "The original tabs described content. The final tabs describe user questions: what to do today, what I'm building, how I train, and how I'm improving.",
               },
             ].map((item) => (
               <details key={item.shift} className="group bg-skill-surface border border-skill-raised/40 rounded-xl overflow-hidden">
