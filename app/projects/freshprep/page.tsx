@@ -121,6 +121,23 @@ export default function FreshPrepCaseStudy() {
             <p className="text-sm text-brand-muted/40 max-w-xl">
               Built solo. Working product with Android build and mobile-first workflows.
             </p>
+            <p className="text-sm text-brand-muted/50 max-w-xl mt-2">
+              Most health app users are gone by Day 30. FreshPrep is designed around what brings them back.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-3 mb-8 max-w-xl">
+            {[
+              { value: "44%",   label: "of Americans meal prep regularly",     source: "MyProtein survey, 2022" },
+              { value: "7%",    label: "Day-30 retention in health apps",      source: "Adjust, 2023"           },
+              { value: "$1.7B", label: "H&F app revenue generated in 2022",    source: "Sensor Tower, 2023"     },
+            ].map(item => (
+              <div key={item.value} className="bg-brand-surface border border-brand-raised/40 rounded-xl px-3 py-3">
+                <p className="text-xl font-bold text-brand-accent mb-0.5">{item.value}</p>
+                <p className="text-xs text-brand-muted/60 leading-snug mb-1">{item.label}</p>
+                <p className="text-xs text-brand-muted/30">{item.source}</p>
+              </div>
+            ))}
           </div>
 
           <a
@@ -197,6 +214,22 @@ export default function FreshPrepCaseStudy() {
             ))}
           </div>
 
+          {/* Gap validation */}
+          <div className="bg-brand-surface border border-brand-raised/40 rounded-xl px-5 py-5 mb-8">
+            <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-4">How I validated the gap</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="border-l-2 border-brand-raised/80 pl-4">
+                <p className="text-xs text-brand-muted/40 uppercase tracking-wider font-medium mb-1">Personal experience</p>
+                <p className="text-sm text-brand-muted/60 leading-relaxed">The execution breakdown was a firsthand frustration. Sunday prep, Wednesday confusion. The gap wasn&apos;t theoretical — it was a weekly reality with no tool to fix it.</p>
+              </div>
+              <div className="border-l-2 border-brand-accent pl-4">
+                <p className="text-xs text-brand-muted/40 uppercase tracking-wider font-medium mb-1">Competitive analysis</p>
+                <p className="text-sm text-brand-muted/60 leading-relaxed">Reviewed apps across the category: MyFitnessPal, Cronometer, and Lose It (calorie tracking); Mealime, Paprika, Plan to Eat, and Whisk (recipe and meal planning); Notion and spreadsheets (DIY). Every app stopped at either planning or logging. None tracked what was made, its freshness, or how to distribute it across the week.</p>
+              </div>
+            </div>
+            <p className="text-xs text-brand-muted/30 mt-4 pt-4 border-t border-brand-raised/30">Finding: the execution layer between cooking and consuming had no dedicated product in the category.</p>
+          </div>
+
           {/* Target user */}
           <div className="bg-brand-raised rounded-2xl px-7 py-8 mb-8 border border-brand-accent/20">
             <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-3">Initial target user</p>
@@ -257,7 +290,7 @@ export default function FreshPrepCaseStudy() {
           <SectionHeading>The design centers on one metric: weekly return.</SectionHeading>
 
           <p className="text-brand-muted/60 leading-relaxed mb-4 max-w-2xl">
-            In subscription and freemium products, value is a function of how long users stay, not just how many sign up. Health and fitness apps have some of the highest early churn rates across categories. Week-4 retention for the median product in this space regularly falls into single-digit percentages (Mixpanel Product Benchmarks). Most users leave before the product has had a chance to prove its value.
+            In subscription and freemium products, value is a function of how long users stay, not just how many sign up. Health and fitness apps retain only 12% of users by Day 7 and 7% by Day 30 — among the lowest of any app category (Adjust, Mobile App Retention Benchmarks 2023). Most users leave before the product has had a chance to prove its value.
           </p>
 
           <p className="text-brand-muted/60 leading-relaxed mb-8 max-w-2xl">
@@ -267,12 +300,12 @@ export default function FreshPrepCaseStudy() {
           {/* Visual 1 — Modeled Impact Callout */}
           <div className="bg-brand-raised rounded-2xl px-7 py-8 mb-8 border border-brand-accent/20">
             <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-1">Modeled Impact</p>
-            <p className="text-xs text-brand-muted/30 italic mb-5">Illustrative model only. All figures are assumed, not measured. Based on Mixpanel health app retention benchmarks.</p>
+            <p className="text-xs text-brand-muted/30 italic mb-5">Illustrative model only. Improvement rate assumed, not measured. Baseline from Adjust, Mobile App Retention Benchmarks 2023.</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               {[
-                { value: "~15%",       label: "Assumed baseline week-2 retention",               note: "Within Mixpanel health/fitness benchmarks"                               },
-                { value: "+10pp",      label: "Modeled improvement from habit loop design",      note: "Based on Amplitude research into activation and early retention patterns" },
-                { value: "+100 users", label: "Additional retained users per 1,000 signups",     note: "At the modeled improvement rate"                                         },
+                { value: "7%",        label: "Day-30 retention baseline",                  note: "Adjust benchmark for health & fitness apps (2023)"                                              },
+                { value: "2x",        label: "Modeled retention target for engaged users", note: "Assumed for users completing 2+ weekly prep cycles — consistent with Amplitude activation research" },
+                { value: "+70 users", label: "Additional retained users per 1,000 signups", note: "At modeled improvement rate — illustrative only"                                               },
               ].map(item => (
                 <div key={item.label} className="bg-brand-surface/60 rounded-xl px-4 py-4">
                   <p className="text-2xl font-bold text-brand-accent mb-1">{item.value}</p>
@@ -283,7 +316,7 @@ export default function FreshPrepCaseStudy() {
             </div>
             <div className="border-t border-brand-raised/60 pt-5">
               <p className="text-xs text-brand-muted/50 leading-relaxed max-w-2xl">
-                At a hypothetical 5% conversion to paid ($5/month), 100 additional retained users per cohort adds $25 MRR. That repeats with every new signup cohort. The more durable business effect is habit formation: users who complete a second or third prep cycle have demonstrated the weekly behavior the product is designed to reinforce.
+                At a hypothetical 5% conversion to paid ($5/month), 70 additional retained users per cohort adds ~$17.50 MRR. That repeats with every new signup cohort. The more durable effect is habit formation: users who complete a second or third prep cycle have demonstrated the weekly behavior the product is designed to reinforce. Amplitude research shows 69% of products with strong week-1 activation are also top 3-month retention performers (2025 Product Benchmark Report, 2,600+ companies).
               </p>
             </div>
           </div>
@@ -571,10 +604,13 @@ export default function FreshPrepCaseStudy() {
         {/* ── METRICS ── */}
         <section id="metrics" className="mb-16">
           <Label>Measuring Success</Label>
-          <SectionHeading>How I&apos;d know if this is working.</SectionHeading>
+          <SectionHeading>What I&apos;d measure and why it matters.</SectionHeading>
 
+          <p className="text-brand-muted/60 leading-relaxed mb-4 max-w-2xl">
+            In a subscription or freemium model, Day-30 retention is the number everything else flows from. Health and fitness apps sit at 7% median (Adjust, 2023) — which means the product has roughly four weeks to prove its value before most users are gone. The metrics below track whether FreshPrep is winning that window.
+          </p>
           <p className="text-brand-muted/60 leading-relaxed mb-8 max-w-2xl">
-            The hypothesis: visible inventory, freshness tracking, and scheduling keep prepped food from going to waste and habits from breaking down mid-week.
+            The hypothesis: visible inventory, freshness tracking, and scheduling drive the repeat behavior that retention requires — not just a better user experience.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
