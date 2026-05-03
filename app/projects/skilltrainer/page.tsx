@@ -213,7 +213,7 @@ export default function SkillTrainerCaseStudy() {
               ))}
               <div className="px-4 py-3 flex flex-col sm:flex-row sm:gap-4 bg-skill-brand/5">
                 <p className="text-sm font-semibold text-skill-brand sm:w-56 sm:shrink-0 mb-0.5 sm:mb-0">MakePerfect</p>
-                <p className="text-sm text-skill-muted/70">Reusable structured progression across any skill. Define the routine once; the product runs it session after session.</p>
+                <p className="text-sm text-skill-muted/70">Most tools track time or streaks. MakePerfect tracks measurable progress within exercises — reusable across any skill, with the structure already defined before each session starts.</p>
               </div>
             </div>
           </div>
@@ -598,20 +598,12 @@ export default function SkillTrainerCaseStudy() {
                 detail: "Assumed cadence automation would create the practice plan. Building showed users wanted control over what they practiced. Named routines became the core model.",
               },
               {
-                shift: "Metric config moved to the routine entry",
-                detail: "Assumed metrics belonged on the exercise. Building showed the same exercise can serve different purposes across routines. Moving config to the entry kept the library reusable.",
-              },
-              {
                 shift: "Counters replaced text inputs",
                 detail: "Assumed numeric input was fine. Testing the session flow made keyboard entry feel wrong. Large counters fit the moment of use.",
               },
               {
                 shift: "Domain-specific metrics were rejected permanently",
                 detail: "Assumed category-specific metrics might be useful later. Reframed them as a threat to the product's universal value.",
-              },
-              {
-                shift: "XP became mastery ranks",
-                detail: "Assumed levels would motivate. They felt generic. Ranks tied to completed routines better matched the behavior the product should reward.",
               },
             ].map((item) => (
               <details key={item.shift} className="group bg-skill-surface border border-skill-raised/40 rounded-xl overflow-hidden">
