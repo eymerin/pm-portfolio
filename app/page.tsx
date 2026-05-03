@@ -25,10 +25,12 @@ export default function Home() {
               View FreshPrep Case Study
             </Link>
             <a
-              href="mailto:garrett.bryce.young@gmail.com"
+              href="https://linkedin.com/in/garrett-young-274179245"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 border border-site-border/40 text-site-ink text-sm font-medium rounded-full hover:border-site-accent/60 hover:bg-site-accent/10 transition-colors"
             >
-              Get in touch
+              Connect on LinkedIn
             </a>
           </div>
         </div>
@@ -129,12 +131,14 @@ export default function Home() {
             <p className="text-site-secondary text-base mb-3 max-w-sm mx-auto leading-relaxed">
               If your team is building products where execution, adoption, or workflow friction matters, I&apos;d welcome the conversation.
             </p>
-            <p className="text-site-muted text-sm mb-8">garrett.bryce.young@gmail.com</p>
+            <p className="text-site-muted text-sm mb-6">garrett.bryce.young@gmail.com</p>
             <a
-              href="mailto:garrett.bryce.young@gmail.com"
+              href="https://linkedin.com/in/garrett-young-274179245"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-3.5 bg-site-warm text-white text-sm font-bold rounded-full hover:bg-site-warm/85 transition-colors shadow-lg"
             >
-              Let&apos;s connect
+              Connect on LinkedIn
             </a>
           </div>
         </div>

@@ -91,10 +91,12 @@ export default function About() {
           View FreshPrep Case Study
         </Link>
         <a
-          href="mailto:garrett.bryce.young@gmail.com"
+          href="https://linkedin.com/in/garrett-young-274179245"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-6 py-3 border border-site-border/40 text-site-ink text-sm font-medium rounded-full hover:border-site-accent/60 hover:bg-site-accent/10 transition-colors"
         >
-          Get in touch
+          Connect on LinkedIn
         </a>
       </div>
     </div>

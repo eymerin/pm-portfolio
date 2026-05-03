@@ -711,11 +711,14 @@ export default function SkillTrainerCaseStudy() {
           <p className="text-sm text-skill-muted/50 mb-2">This project reflects how I work through product problems: find the friction, simplify the system, and build toward repeat behavior.</p>
           <h3 className="text-xl font-bold text-skill-text mb-5">If that&apos;s relevant to what you&apos;re building, I&apos;d welcome the conversation.</h3>
           <a
-            href="mailto:garrett.bryce.young@gmail.com"
-            className="inline-block px-6 py-2.5 bg-skill-brand text-white text-sm font-semibold rounded-full hover:bg-skill-brand transition-colors"
+            href="https://linkedin.com/in/garrett-young-274179245"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-2.5 bg-skill-brand text-white text-sm font-semibold rounded-full hover:bg-skill-brand/85 transition-colors mb-3"
           >
-            garrett.bryce.young@gmail.com
+            Connect on LinkedIn
           </a>
+          <p className="text-xs text-skill-muted/40">garrett.bryce.young@gmail.com</p>
         </div>
 
       </article>

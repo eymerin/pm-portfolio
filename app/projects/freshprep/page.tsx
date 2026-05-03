@@ -685,11 +685,14 @@ export default function FreshPrepCaseStudy() {
           <p className="text-sm text-brand-muted/50 mb-2">This project reflects how I approach product problems: identify where users drop off, design around that moment, and connect improvements directly to retention and long-term value.</p>
           <h3 className="text-xl font-bold text-brand-muted mb-5">If that&apos;s relevant to what you&apos;re building, I&apos;d welcome the conversation.</h3>
           <a
-            href="mailto:garrett.bryce.young@gmail.com"
-            className="inline-block px-6 py-2.5 bg-brand-accent text-brand-muted text-sm font-semibold rounded-full hover:bg-brand-accent/80 transition-colors"
+            href="https://linkedin.com/in/garrett-young-274179245"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-2.5 bg-brand-accent text-brand-muted text-sm font-semibold rounded-full hover:bg-brand-accent/80 transition-colors mb-3"
           >
-            garrett.bryce.young@gmail.com
+            Connect on LinkedIn
           </a>
+          <p className="text-xs text-brand-muted/40">garrett.bryce.young@gmail.com</p>
         </div>
 
       </article>
