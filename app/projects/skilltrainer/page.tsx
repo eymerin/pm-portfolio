@@ -67,14 +67,15 @@ function DemoSection({
 /* ── Nav ────────────────────────────────────────────────────── */
 
 const NAV_LINKS = [
-  { href: "#problem",   label: "Problem"    },
-  { href: "#market",    label: "Market"     },
-  { href: "#insight",   label: "Insight"    },
-  { href: "#demos",     label: "Demos"      },
-  { href: "#decisions", label: "Decisions"  },
-  { href: "#scope",     label: "Scope"      },
-  { href: "#metrics",   label: "Metrics"    },
-  { href: "#next",      label: "What's Next"},
+  { href: "#problem",       label: "Problem"       },
+  { href: "#market",        label: "Market"        },
+  { href: "#insight",       label: "Insight"       },
+  { href: "#business-case", label: "Business Case" },
+  { href: "#demos",         label: "Demos"         },
+  { href: "#decisions",     label: "Decisions"     },
+  { href: "#scope",         label: "Scope"         },
+  { href: "#metrics",       label: "Metrics"       },
+  { href: "#next",          label: "What's Next"   },
 ];
 
 /* ── Page ───────────────────────────────────────────────────── */
@@ -123,10 +124,28 @@ export default function SkillTrainerCaseStudy() {
             <p className="text-base sm:text-xl text-skill-muted/80 max-w-2xl leading-relaxed mb-3">
               A universal structured practice system for people who already show up, but still are not improving.
             </p>
-            <p className="text-sm text-skill-muted/40 max-w-xl">
+            <p className="text-sm text-skill-muted/60 max-w-xl">
+              Showing up consistently is a solved problem. Getting better consistently isn&apos;t.
+            </p>
+            <p className="text-sm text-skill-muted/40 max-w-xl mt-2">
               Built solo as a working product with web and Android builds, designed to support progress across any skill.
             </p>
           </div>
+
+          <div className="grid grid-cols-3 gap-3 mb-4 max-w-xl">
+            {[
+              { value: "74%",  label: "of U.S. adults actively pursue personal learning",  source: "Pew Research, 2016" },
+              { value: "3%",   label: "Day-30 retention in education apps",                source: "AppsFlyer, 2022"    },
+              { value: "$6B",  label: "global education apps market",                      source: "IMARC, 2024"        },
+            ].map(item => (
+              <div key={item.value} className="bg-skill-surface border border-skill-raised/40 rounded-xl px-3 py-3">
+                <p className="text-xl font-bold text-skill-brand mb-0.5">{item.value}</p>
+                <p className="text-xs text-skill-muted/60 leading-snug mb-1">{item.label}</p>
+                <p className="text-xs text-skill-muted/30">{item.source}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-skill-muted/40 max-w-xl mb-6">The learners exist. The tools aren&apos;t keeping them.</p>
 
           <a
             href="#demos"
@@ -207,9 +226,16 @@ export default function SkillTrainerCaseStudy() {
           <Label>The Opportunity</Label>
           <SectionHeading>A real market gap no existing tool owns.</SectionHeading>
 
-          <p className="text-skill-muted/60 leading-relaxed mb-8 max-w-2xl">
+          <p className="text-skill-muted/60 leading-relaxed mb-6 max-w-2xl">
             Millions of adults practice skills seriously outside formal instruction. Most already have consistency. What they lack is structure that transfers across disciplines.
           </p>
+
+          <div className="bg-skill-surface border border-skill-raised/40 rounded-xl px-5 py-5 mb-8">
+            <p className="text-xs text-skill-muted/40 uppercase tracking-widest font-medium mb-3">Market Context</p>
+            <p className="text-sm text-skill-muted/60 leading-relaxed max-w-2xl">
+              The personal development market is large and growing — education apps alone represent a $6 billion global category (IMARC, 2024), and 74% of U.S. adults actively pursued personal learning in the past year (Pew Research, 2016). Most tools in this space track attendance or are locked to a single discipline. The cross-domain, structure-first layer remains largely unaddressed. That is where MakePerfect operates.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             {[
@@ -231,6 +257,22 @@ export default function SkillTrainerCaseStudy() {
                 <p className="text-sm text-skill-muted/60 leading-relaxed">{item.body}</p>
               </Card>
             ))}
+          </div>
+
+          {/* Gap validation */}
+          <div className="bg-skill-surface border border-skill-raised/40 rounded-xl px-5 py-5 mb-8">
+            <p className="text-xs text-skill-muted/40 uppercase tracking-widest font-medium mb-4">How I validated the gap</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="border-l-2 border-skill-raised/80 pl-4">
+                <p className="text-xs text-skill-muted/40 uppercase tracking-wider font-medium mb-1">Personal experience</p>
+                <p className="text-sm text-skill-muted/60 leading-relaxed">Practiced a skill consistently for years — regular sessions, real motivation — but noticed improvement wasn&apos;t keeping pace with the time invested. Sessions ended without a clear record, no defined plan for what was next, and no way to tell whether the effort had been well-spent. The gap between showing up and actually getting better was visible before any tool existed to address it.</p>
+              </div>
+              <div className="border-l-2 border-skill-brand pl-4">
+                <p className="text-xs text-skill-muted/40 uppercase tracking-wider font-medium mb-1">Competitive analysis</p>
+                <p className="text-sm text-skill-muted/60 leading-relaxed">Reviewed tools across the space: Streaks and Loop (habit trackers — attendance only, no session structure); Yousician and Strong (domain-specific, single discipline each); Notion and spreadsheets (flexible but require users to design and maintain the system, which most abandon within weeks). Every option either locked users to one domain, ignored what happened inside a session, or imposed a setup burden most users don&apos;t sustain.</p>
+              </div>
+            </div>
+            <p className="text-xs text-skill-muted/30 mt-4 pt-4 border-t border-skill-raised/30">Finding: no tool provided structured, cross-domain practice management without requiring the user to build the system themselves.</p>
           </div>
 
           {/* Target user */}
@@ -256,33 +298,6 @@ export default function SkillTrainerCaseStudy() {
             </div>
           </div>
 
-          {/* Why users return */}
-          <p className="text-xs text-skill-brand font-semibold uppercase tracking-widest mb-4">Why users come back</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {[
-              {
-                title: "Routines remove daily decisions",
-                body: "Once built, a routine answers what to practice for every future session.",
-              },
-              {
-                title: "Inconsistency becomes visible",
-                body: "The week strip shows completed, missed, and upcoming days. Patterns that felt invisible become obvious.",
-              },
-              {
-                title: "Progress accumulates",
-                body: "Sessions build a record. That record only exists in MakePerfect.",
-              },
-              {
-                title: "The system grows with skills",
-                body: "Users tune targets and swap exercises as they improve. The product stays useful without starting over.",
-              },
-            ].map(item => (
-              <Card key={item.title}>
-                <h4 className="text-sm font-semibold text-skill-text mb-1">{item.title}</h4>
-                <p className="text-sm text-skill-muted/60 leading-relaxed">{item.body}</p>
-              </Card>
-            ))}
-          </div>
         </section>
 
         <Divider />
@@ -322,6 +337,70 @@ export default function SkillTrainerCaseStudy() {
                 <p className="text-sm text-skill-muted/60 leading-relaxed">{item.body}</p>
               </Card>
             ))}
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* ── BUSINESS CASE ── */}
+        <section id="business-case" className="mb-16">
+          <Label>Business Case</Label>
+          <SectionHeading>The product has to earn the second session.</SectionHeading>
+
+          <p className="text-skill-muted/60 leading-relaxed mb-4 max-w-2xl">
+            Education apps have some of the worst retention numbers of any app category. Day-30 retention sits around 3% — meaning 97 out of 100 users are gone within a month (AppsFlyer, 2022). Most leave before the product has had a chance to show what structured practice actually feels like.
+          </p>
+
+          <p className="text-skill-muted/60 leading-relaxed mb-8 max-w-2xl">
+            In freemium products, early retention is the primary driver of lifetime value. Improving it increases revenue per user and reduces the treadmill of chasing new installs to maintain growth.
+          </p>
+
+          {/* Visual 1 — Modeled Impact */}
+          <div className="bg-skill-raised/70 rounded-2xl px-7 py-8 mb-8 border border-skill-brand/20">
+            <p className="text-xs text-skill-muted/40 uppercase tracking-widest font-medium mb-1">Modeled Impact</p>
+            <p className="text-xs text-skill-muted/30 italic mb-5">Illustrative model only. Improvement rate assumed, not measured. Baseline from AppsFlyer education app benchmarks, 2022.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              {[
+                { value: "3%",        label: "Day-30 retention baseline",                   note: "AppsFlyer benchmark for education apps (2022)"                                                     },
+                { value: "+5pp",      label: "Modeled improvement for engaged users",        note: "Assumed for users completing 2+ structured sessions — consistent with Amplitude activation research" },
+                { value: "+50 users", label: "Additional retained users per 1,000 signups",  note: "At modeled improvement rate — illustrative only"                                                   },
+              ].map(item => (
+                <div key={item.label} className="bg-skill-surface/60 rounded-xl px-4 py-4">
+                  <p className="text-2xl font-bold text-skill-brand mb-1">{item.value}</p>
+                  <p className="text-xs font-medium text-skill-muted/70 mb-1">{item.label}</p>
+                  <p className="text-xs text-skill-muted/30 leading-relaxed">{item.note}</p>
+                </div>
+              ))}
+            </div>
+            <div className="border-t border-skill-raised/60 pt-5">
+              <p className="text-xs text-skill-muted/50 leading-relaxed max-w-2xl">
+                At scale, small improvements in early retention compound across cohorts. The more durable effect is conversion: MakePerfect&apos;s freemium trigger fires at the second subject — exactly when a user has proven they want structure across more than one skill. Users who reach that moment have already demonstrated the habit the product is designed to build. Amplitude research shows 69% of products with strong week-1 activation are also top 3-month retention performers (2025 Product Benchmark Report, 2,600+ companies).
+              </p>
+            </div>
+          </div>
+
+          {/* Visual 2 — Product to Metric Mapping */}
+          <p className="text-xs text-skill-brand font-semibold uppercase tracking-widest mb-4">How product decisions connect to metrics</p>
+          <div className="overflow-hidden rounded-xl border border-skill-raised/40">
+            <div className="grid grid-cols-3 bg-skill-raised/60 px-4 py-2.5">
+              <p className="text-xs font-semibold text-skill-muted/40 uppercase tracking-wider">Product Decision</p>
+              <p className="text-xs font-semibold text-skill-muted/40 uppercase tracking-wider">Metric Affected</p>
+              <p className="text-xs font-semibold text-skill-muted/40 uppercase tracking-wider">Business Value</p>
+            </div>
+            <div className="divide-y divide-skill-raised/20">
+              {[
+                { decision: "Routine-first model",               metric: "Session completion rate", value: "No plan means no session. Users with routines complete sessions; without them, they stall before starting."   },
+                { decision: "Starter packs",                     metric: "Time to first session",   value: "Gets users to value before cold-start kills motivation — under two minutes from install."                    },
+                { decision: "Mastery ranks on completion",       metric: "Long-term retention",     value: "Rewards completing structured sessions, not logging time — the behavior that predicts improvement."           },
+                { decision: "Second subject as upgrade trigger", metric: "Freemium conversion",     value: "Fires at peak intent: the user has proven the model works for one skill and wants it for another."           },
+              ].map(row => (
+                <div key={row.decision} className="grid grid-cols-3 gap-4 px-4 py-3.5">
+                  <p className="text-sm font-medium text-skill-muted/80">{row.decision}</p>
+                  <p className="text-sm text-skill-muted/60">{row.metric}</p>
+                  <p className="text-sm text-skill-muted/50 leading-relaxed">{row.value}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -450,15 +529,12 @@ export default function SkillTrainerCaseStudy() {
             </div>
             <div className="divide-y divide-skill-raised/20">
               {[
-                ["Library — Subjects, Skills, Exercises",  "Full 3-level hierarchy with inline create, edit, and delete. No metrics on the exercise itself — lean by design."],
-                ["Routine builder",                         "Per-entry metric config and optional day scheduling. Exercises can be added, reordered, and configured independently per routine."],
-                ["Session execution",                       "Counter UI for reps/sets, countdown and countup timer, Successful/Missed for success tracking. Status required per exercise, no default."],
-                ["Session complete",                        "Mastery reward strip showing subject rank and streak. Per-exercise summary with actual metric values and status badges."],
-                ["Home with smart CTA",                     "Rule-based hero card, seven-day week strip, and a prioritized CTA that always surfaces the right next action."],
-                ["Progress screen",                         "Mastery ranks per subject (Unranked through Diamond) with progress bars, five milestones, and weekly snapshot stats."],
-                ["Onboarding with starter packs",           "Five domain packs plus a build-from-scratch path. Gets users to their first session in under two minutes."],
-                ["Session history and detail",              "Per-exercise breakdown for any completed session. Full history in reverse chronological order."],
-                ["localStorage persistence",                "All data on device. No account, no backend, no setup friction."],
+                ["Routine builder",               "Per-entry metric config and optional day scheduling. The same exercise tracks differently across routines — config on the entry keeps the library reusable."],
+                ["Session execution",             "Counter UI for reps/sets, countdown and countup timer, success tracking. Status required per exercise, no default — an honest log requires a deliberate choice."],
+                ["Onboarding with starter packs", "Five domain packs plus a build-from-scratch path. Solves the cold-start problem by giving users a working system before their first session."],
+                ["Home with smart CTA",           "Rule-based hero card, seven-day week strip, and a prioritized CTA that always surfaces the right next action based on the user's schedule and history."],
+                ["Progress screen",               "Mastery ranks per subject (Unranked through Diamond) with progress bars and milestones. Ranks earned by completing routines, not logging minutes."],
+                ["localStorage persistence",      "All data on device. No account, no backend, no setup friction — removes the barrier between installing and using."],
               ].map(([feature, reason]) => (
                 <div key={feature} className="px-4 py-3 flex gap-4 items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-skill-brand mt-2 shrink-0" />
@@ -548,36 +624,43 @@ export default function SkillTrainerCaseStudy() {
         {/* ── METRICS ── */}
         <section id="metrics" className="mb-16">
           <Label>Measuring Success</Label>
-          <SectionHeading>How I&apos;d measure it.</SectionHeading>
+          <SectionHeading>What I&apos;d measure and why it matters.</SectionHeading>
+
+          <p className="text-skill-muted/60 leading-relaxed mb-4 max-w-2xl">
+            Education apps retain only 3% of users by Day 30 — the lowest of any major app category (AppsFlyer, 2022). The product has a narrow window to prove its value before most users are gone. The metrics below track whether MakePerfect is winning that window.
+          </p>
+          <p className="text-skill-muted/60 leading-relaxed mb-8 max-w-2xl">
+            The hypothesis: structured routines and visible progress drive the repeat behavior that retention requires — not just a cleaner interface.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
             {[
               {
                 category: "Activation",
                 metrics: [
-                  { name: "Onboarding completion rate",             why: "Users who skip setup never run a session." },
-                  { name: "First session within 24 hours of install", why: "Long gap means motivation didn't survive setup." },
+                  { name: "Onboarding completion rate",              why: "Users who skip setup never run a session. At 3% industry Day-30 retention, every friction point in activation is a user who never sees the product's value." },
+                  { name: "First session within 24 hours of install", why: "Motivation is highest at install. Long gaps mean the product failed to prove itself before momentum died." },
                 ],
               },
               {
                 category: "Engagement",
                 metrics: [
-                  { name: "Sessions completed per user per week", why: "The core behavior. Low here means session friction is still too high." },
-                  { name: "Routine reuse rate",                   why: "Running the same routine repeatedly means the product is working as designed." },
+                  { name: "Sessions completed per user per week", why: "The core retention behavior. Without regular completion, there's no habit, no history, and no path to freemium conversion." },
+                  { name: "Routine reuse rate",                   why: "High reuse means the routine has become the user's default practice plan — the embedded behavior that drives long-term retention." },
                 ],
               },
               {
                 category: "Retention",
                 metrics: [
-                  { name: "7-day and 30-day return rate",          why: "Week one return is the first real signal on habit formation." },
-                  { name: "Streak continuation after first break", why: "Restarting after a gap shows the product earned another chance." },
+                  { name: "7-day and 30-day return rate",          why: "The primary retention KPI. Against a 3% Day-30 industry median (AppsFlyer, 2022), early return is the clearest signal that the product has earned a place in the user's routine." },
+                  { name: "Streak continuation after first break", why: "The first missed session is where most habits end. Restart rate is the most honest signal of whether the product has built enough pull to survive real life." },
                 ],
               },
               {
                 category: "Product quality signals",
                 metrics: [
-                  { name: "Rescheduled exercise rate per session", why: "High rate signals over-scoped routines or targets that don't match reality." },
-                  { name: "Routine edit frequency after first use", why: "Frequent early edits mean the setup flow produces poor-fit routines." },
+                  { name: "Rescheduled exercise rate per session",  why: "High rates signal over-scoped routines. That's a data quality problem and a sign the setup flow isn't helping users build realistic plans." },
+                  { name: "Routine edit frequency after first use", why: "Heavy early editing means first-run setup produces poor-fit routines. If this is high, starter packs need refinement." },
                 ],
               },
             ].map(group => (
@@ -667,8 +750,8 @@ export default function SkillTrainerCaseStudy() {
                 body: "You can't ask users for hard setup before they understand the payoff. The onboarding flow exists because cold-start was a sequencing problem, not a form-design problem.",
               },
               {
-                title: "Scope cuts need a reason",
-                body: "I cut push notifications, sync, and community features because they depend on the core loop working first. A cut with a reason is easier to defend and easier to revisit.",
+                title: "Universality is a constraint, not a feature",
+                body: "Every time a domain-specific field came up — tempo for music, split times for running — saying no got easier once the model was clear. Metrics live on routine entries, not exercises. That one decision protected the library's reusability across every skill a user might add.",
               },
               {
                 title: "The shipped model should beat the original idea",
@@ -685,30 +768,9 @@ export default function SkillTrainerCaseStudy() {
 
         <Divider />
 
-        {/* ── WHAT THIS PROJECT DEMONSTRATES ── */}
-        <section className="mb-10">
-          <Label>PM Signals in This Project</Label>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            {[
-              "Product Judgment",
-              "Tradeoff Decisions",
-              "Activation Design",
-              "Retention Thinking",
-              "System Architecture",
-              "Iteration from Learning",
-              "UX Flow Design",
-              "Prioritization",
-            ].map(comp => (
-              <div key={comp} className="bg-skill-surface border border-skill-raised/40 rounded-lg px-3 py-2.5 text-xs text-skill-muted/60 font-medium text-center">
-                {comp}
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* ── CTA ── */}
         <div className="bg-skill-raised/60 border border-skill-brand/20 rounded-2xl px-8 py-10 text-center">
-          <p className="text-sm text-skill-muted/50 mb-2">This project reflects how I work through product problems: find the friction, simplify the system, and build toward repeat behavior.</p>
+          <p className="text-sm text-skill-muted/50 mb-2">This project reflects how I approach product problems: identify where structure breaks down, design the system that replaces it, and connect improvements to retention and long-term value.</p>
           <h3 className="text-xl font-bold text-skill-text mb-5">If that&apos;s relevant to what you&apos;re building, I&apos;d welcome the conversation.</h3>
           <a
             href="https://linkedin.com/in/garrett-young-274179245"
