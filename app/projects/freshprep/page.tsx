@@ -64,8 +64,8 @@ function DemoSection({
 const NAV_LINKS = [
   { href: "#problem",   label: "Problem"    },
   { href: "#market",        label: "Market"        },
-  { href: "#business-case", label: "Business Case" },
   { href: "#insight",       label: "Insight"       },
+  { href: "#business-case", label: "Business Case" },
   { href: "#demos",     label: "Demos"      },
   { href: "#decisions", label: "Decisions"  },
   { href: "#scope",     label: "Scope"      },
@@ -258,6 +258,47 @@ export default function FreshPrepCaseStudy() {
 
         <Divider />
 
+        {/* ── INSIGHT + STRATEGY ── */}
+        <section id="insight" className="mb-16">
+          <Label>The Insight</Label>
+
+          <div className="bg-brand-raised rounded-2xl px-7 py-9 mb-5 border border-brand-accent/20">
+            <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-4">The realization that shaped every design decision</p>
+            <p className="text-2xl font-bold text-brand-muted leading-snug mb-4">
+              &ldquo;The unit of value isn&apos;t the recipe.<br />It&apos;s the prepped batch.&rdquo;
+            </p>
+            <p className="text-sm text-brand-muted/60 max-w-xl leading-relaxed">
+              A prep batch has a quantity, a storage type, a shelf life, and a freshness status. It gets planned, shopped for, cooked, scheduled, and consumed. Every screen either creates that object or acts on it. Once that object was clear, the architecture became easier to reason about.
+            </p>
+          </div>
+
+          <div className="bg-brand-raised rounded-2xl px-7 py-8 mb-8 border border-brand-accent/10">
+            <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-3">The harder problem</p>
+            <p className="text-lg font-bold text-brand-muted leading-snug mb-3">
+              First-time activation is easy. Weekly return behavior is the real design challenge.
+            </p>
+            <p className="text-sm text-brand-muted/60 max-w-xl leading-relaxed">
+              A meal prep tool is only useful if users come back the next week. That meant designing for the full cycle, not just the first session: a dashboard that surfaces the next useful action, a streak tracker that rewards consistency, a reset prompt that appears at the right moment, and prep sessions that end with &ldquo;Covered through Thursday&rdquo; instead of &ldquo;Logged.&rdquo;
+            </p>
+          </div>
+
+          <p className="text-xs text-brand-accent font-semibold uppercase tracking-widest mb-5">How that shaped the strategy</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { title: "Opinionated workflow, flexible choices", body: "The sequence is fixed: plan → shop → prep → schedule → eat. Within each step, real flexibility. Structure where it matters, flexibility where real life needs it." },
+              { title: "Food as a living object",               body: "A prep batch isn't a log entry. It has real-time state: servings remaining, scheduled slots, days until expiration. Every screen reflects current state." },
+              { title: "Designed for weekly return",            body: "Onboarding captures prep frequency and weekly targets. The dashboard zones, streak tracking, coverage estimates, and weekly reset trigger all reinforce the recurring habit — not just the first prep session." },
+            ].map((item) => (
+              <Card key={item.title}>
+                <h4 className="text-sm font-semibold text-brand-muted mb-2">{item.title}</h4>
+                <p className="text-sm text-brand-muted/60 leading-relaxed">{item.body}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <Divider />
+
         {/* ── BUSINESS CASE ── */}
         <section id="business-case" className="mb-16">
           <Label>Business Case</Label>
@@ -317,47 +358,6 @@ export default function FreshPrepCaseStudy() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <Divider />
-
-        {/* ── INSIGHT + STRATEGY ── */}
-        <section id="insight" className="mb-16">
-          <Label>The Insight</Label>
-
-          <div className="bg-brand-raised rounded-2xl px-7 py-9 mb-5 border border-brand-accent/20">
-            <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-4">The realization that shaped every design decision</p>
-            <p className="text-2xl font-bold text-brand-muted leading-snug mb-4">
-              &ldquo;The unit of value isn&apos;t the recipe.<br />It&apos;s the prepped batch.&rdquo;
-            </p>
-            <p className="text-sm text-brand-muted/60 max-w-xl leading-relaxed">
-              A prep batch has a quantity, a storage type, a shelf life, and a freshness status. It gets planned, shopped for, cooked, scheduled, and consumed. Every screen either creates that object or acts on it. Once that object was clear, the architecture became easier to reason about.
-            </p>
-          </div>
-
-          <div className="bg-brand-raised rounded-2xl px-7 py-8 mb-8 border border-brand-accent/10">
-            <p className="text-xs text-brand-muted/40 uppercase tracking-widest font-medium mb-3">The harder problem</p>
-            <p className="text-lg font-bold text-brand-muted leading-snug mb-3">
-              First-time activation is easy. Weekly return behavior is the real design challenge.
-            </p>
-            <p className="text-sm text-brand-muted/60 max-w-xl leading-relaxed">
-              A meal prep tool is only useful if users come back the next week. That meant designing for the full cycle, not just the first session: a dashboard that surfaces the next useful action, a streak tracker that rewards consistency, a reset prompt that appears at the right moment, and prep sessions that end with &ldquo;Covered through Thursday&rdquo; instead of &ldquo;Logged.&rdquo;
-            </p>
-          </div>
-
-          <p className="text-xs text-brand-accent font-semibold uppercase tracking-widest mb-5">How that shaped the strategy</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { title: "Opinionated workflow, flexible choices", body: "The sequence is fixed: plan → shop → prep → schedule → eat. Within each step, real flexibility. Structure where it matters, flexibility where real life needs it." },
-              { title: "Food as a living object",               body: "A prep batch isn't a log entry. It has real-time state: servings remaining, scheduled slots, days until expiration. Every screen reflects current state." },
-              { title: "Designed for weekly return",            body: "Onboarding captures prep frequency and weekly targets. The dashboard zones, streak tracking, coverage estimates, and weekly reset trigger all reinforce the recurring habit — not just the first prep session." },
-            ].map((item) => (
-              <Card key={item.title}>
-                <h4 className="text-sm font-semibold text-brand-muted mb-2">{item.title}</h4>
-                <p className="text-sm text-brand-muted/60 leading-relaxed">{item.body}</p>
-              </Card>
-            ))}
           </div>
         </section>
 
@@ -588,17 +588,17 @@ export default function FreshPrepCaseStudy() {
               {
                 category: "Activation",
                 metrics: [
-                  { name: "First prep batch logged",              why: "The core value object — without it, nothing else is useful." },
-                  { name: "First meal scheduled to calendar",     why: "Indicates the full workflow loop engaged, not just partial setup." },
-                  { name: "Shopping list generated and completed", why: "Signals the plan-to-shop handoff worked." },
+                  { name: "First prep batch logged",               why: "The activation moment. Users who log a prep batch have entered the core value loop — the event most predictive of week-2 return." },
+                  { name: "First meal scheduled to calendar",      why: "Completion of the full workflow. Users who reach this step have invested enough to have a reason to come back." },
+                  { name: "Shopping list generated and completed",  why: "Confirms the plan-to-prep handoff worked. Without it, the retention loop never starts." },
                 ],
               },
               {
                 category: "Engagement",
                 metrics: [
-                  { name: "Meals prepped per week",     why: "The core behavior. Low here means the app isn't part of prep day." },
-                  { name: "Schedule adherence rate",    why: "Meals eaten as scheduled vs. total scheduled — the scheduling layer's usefulness test." },
-                  { name: "Quick swap usage",           why: "Healthy swaps = inventory trusted. Excessive = schedule-to-inventory mismatch." },
+                  { name: "Meals prepped per week",     why: "The core usage signal. Low frequency means the app hasn't embedded in the weekly routine — the behavior retention depends on." },
+                  { name: "Schedule adherence rate",    why: "Meals eaten as scheduled vs. total scheduled. High adherence means the scheduling layer is creating value; low adherence predicts churn." },
+                  { name: "Quick swap usage",           why: "A trust signal. Healthy swap frequency means inventory is trusted and the system is working. Excessive swaps indicate friction that drives drop-off." },
                 ],
               },
               {
@@ -661,7 +661,7 @@ export default function FreshPrepCaseStudy() {
             {[
               { title: "Name the central object early",        body: "The product got clearer once the prep batch became the central object. Everything else — planning, freshness, scheduling, and eating — serves that object." },
               { title: "Workflow gates are product decisions", body: "The 'Send to Prep' step looks like friction, but it protects data quality. Sometimes the right product choice is the slower one because it keeps the system trustworthy." },
-              { title: "Retention is a design problem",        body: "Useful workflows do not automatically create repeat behavior. Return moments have to be designed: the reset prompt, coverage language, streak, and benefit-first completion state all exist for that reason." },
+              { title: "The data model is a business decision",  body: "Once the prep batch became the central object with real state — servings, freshness, scheduled slots — the metrics designed themselves. A clear data model produces clear instrumentation. Fuzzy objects produce fuzzy signals." },
             ].map((item) => (
               <div key={item.title} className="border-l-2 border-brand-raised/80 pl-5">
                 <h4 className="text-sm font-semibold text-brand-muted mb-1">{item.title}</h4>
