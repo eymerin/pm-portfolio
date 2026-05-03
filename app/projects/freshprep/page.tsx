@@ -118,11 +118,11 @@ export default function FreshPrepCaseStudy() {
             <p className="text-base sm:text-xl text-brand-muted/70 max-w-2xl leading-relaxed mb-3">
               A meal prep system built for the part most tools overlook: the week after cooking. Turn one prep session into a week that runs more smoothly.
             </p>
-            <p className="text-sm text-brand-muted/40 max-w-xl">
-              Built solo. Working product with Android build and mobile-first workflows.
-            </p>
-            <p className="text-sm text-brand-muted/50 max-w-xl mt-2">
+            <p className="text-sm text-brand-muted/60 max-w-xl">
               Most health app users are gone by Day 30. FreshPrep is designed around what brings them back.
+            </p>
+            <p className="text-sm text-brand-muted/40 max-w-xl mt-2">
+              Built solo. Working product with Android build and mobile-first workflows.
             </p>
           </div>
 
@@ -253,33 +253,6 @@ export default function FreshPrepCaseStudy() {
             </div>
           </div>
 
-          {/* Why users return */}
-          <p className="text-xs text-brand-accent font-semibold uppercase tracking-widest mb-4">Why users come back every week</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {[
-              {
-                title: "Recurring prep cycles reset the system",
-                body: "Prep is weekly by nature. Every new run creates a new inventory and a new week to plan.",
-              },
-              {
-                title: "Freshness confidence removes guesswork",
-                body: "Knowing what's still safe eliminates the daily anxiety of eyeballing food. That's only possible if the system stays current.",
-              },
-              {
-                title: "Scheduling reduces weekday decision fatigue",
-                body: "Meals already on the calendar mean the 'what should I eat?' question is already answered.",
-              },
-              {
-                title: "Inventory tracking rewards consistency",
-                body: "Log prep, mark meals eaten, watch inventory stay accurate — that feedback loop is the retention mechanism.",
-              },
-            ].map(item => (
-              <Card key={item.title}>
-                <h4 className="text-sm font-semibold text-brand-muted mb-1">{item.title}</h4>
-                <p className="text-sm text-brand-muted/60 leading-relaxed">{item.body}</p>
-              </Card>
-            ))}
-          </div>
         </section>
 
         <Divider />
@@ -293,8 +266,12 @@ export default function FreshPrepCaseStudy() {
             In subscription and freemium products, value is a function of how long users stay, not just how many sign up. Health and fitness apps retain only 12% of users by Day 7 and 7% by Day 30 — among the lowest of any app category (Adjust, Mobile App Retention Benchmarks 2023). Most users leave before the product has had a chance to prove its value.
           </p>
 
-          <p className="text-brand-muted/60 leading-relaxed mb-8 max-w-2xl">
+          <p className="text-brand-muted/60 leading-relaxed mb-4 max-w-2xl">
             FreshPrep&apos;s design targets that window directly. The weekly return loop, coverage language, streak tracking, and reset prompts all exist to push past the early drop-off point and make repeat use the natural outcome of a good first session.
+          </p>
+
+          <p className="text-brand-muted/60 leading-relaxed mb-8 max-w-2xl">
+            In subscription products, improving early retention directly increases lifetime value and reduces reliance on acquiring new users to maintain revenue. It&apos;s one of the highest-leverage improvements a product team can make.
           </p>
 
           {/* Visual 1 — Modeled Impact Callout */}
@@ -316,7 +293,7 @@ export default function FreshPrepCaseStudy() {
             </div>
             <div className="border-t border-brand-raised/60 pt-5">
               <p className="text-xs text-brand-muted/50 leading-relaxed max-w-2xl">
-                At a hypothetical 5% conversion to paid ($5/month), 70 additional retained users per cohort adds ~$17.50 MRR. That repeats with every new signup cohort. The more durable effect is habit formation: users who complete a second or third prep cycle have demonstrated the weekly behavior the product is designed to reinforce. Amplitude research shows 69% of products with strong week-1 activation are also top 3-month retention performers (2025 Product Benchmark Report, 2,600+ companies).
+                At scale, even small improvements in early retention compound across large user cohorts. That makes this one of the highest-leverage drivers of sustainable revenue. The more durable effect is habit formation: users who complete a second or third prep cycle have demonstrated the weekly behavior the product is designed to reinforce. Amplitude research shows 69% of products with strong week-1 activation are also top 3-month retention performers (2025 Product Benchmark Report, 2,600+ companies).
               </p>
             </div>
           </div>
@@ -634,9 +611,9 @@ export default function FreshPrepCaseStudy() {
               {
                 category: "Retention",
                 metrics: [
-                  { name: "Weekly return rate",                    why: "Prep is weekly. Return week over week = using the product as designed." },
-                  { name: "Repeat prep cycles completed",          why: "Full plan → consume loop more than once = genuine workflow adoption." },
-                  { name: "Active prep weeks in last 30 days",     why: "Forgiving retention signal that accounts for irregular schedules." },
+                  { name: "Weekly return rate",               why: "The primary retention KPI. Tracks whether the product is winning the Day-30 window where 93% of health app users churn (Adjust, 2023)." },
+                  { name: "Repeat prep cycles completed",     why: "Two or more completed cycles signals genuine habit formation. That's the behavior that drives long-term retention and lifetime value in subscription products." },
+                  { name: "Active prep weeks in last 30 days", why: "Aligns with the industry churn window. Consistent activity here is the leading indicator that a user has passed the drop-off point." },
                 ],
               },
               {
@@ -703,30 +680,9 @@ export default function FreshPrepCaseStudy() {
 
         <Divider />
 
-        {/* ── WHAT THIS PROJECT DEMONSTRATES ── */}
-        <section className="mb-10">
-          <Label>PM Signals in This Project</Label>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            {[
-              "Lifecycle product design",
-              "Habit loop engineering",
-              "MVP scope discipline",
-              "Tradeoff documentation",
-              "Operational UX",
-              "Instrumentation design",
-              "Recurring behavior design",
-              "Constraint-based architecture",
-            ].map(comp => (
-              <div key={comp} className="bg-brand-surface border border-brand-raised/40 rounded-lg px-3 py-2.5 text-xs text-brand-muted/60 font-medium text-center">
-                {comp}
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* ── CTA ── */}
         <div className="bg-brand-raised border border-brand-accent/30 rounded-2xl px-8 py-10 text-center">
-          <p className="text-sm text-brand-muted/50 mb-2">This project reflects how I approach recurring real-world problems: reduce friction, build trust, and make repeat use easier.</p>
+          <p className="text-sm text-brand-muted/50 mb-2">This project reflects how I approach product problems: identify where users drop off, design around that moment, and connect improvements directly to retention and long-term value.</p>
           <h3 className="text-xl font-bold text-brand-muted mb-5">If that&apos;s relevant to what you&apos;re building, I&apos;d welcome the conversation.</h3>
           <a
             href="mailto:garrett.bryce.young@gmail.com"
